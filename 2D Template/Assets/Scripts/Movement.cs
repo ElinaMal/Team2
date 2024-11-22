@@ -3,8 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S;
-    public float speed = 6;
-    public float maxSpeed = 8;
+    public float speed = 8, maxSpeed = 15;
     bool facingLeft = false;
 
     private Rigidbody2D _rb;
@@ -26,7 +25,7 @@ public class Movement : MonoBehaviour
             }
 
             //get the GameObject's Rigidbody2D component and set its velocity to be to the left at the given speed
-            _rb.AddForce(new Vector2(-1,0) * speed);
+            _rb.AddForce(new Vector2(-1, 0) * speed);
 
             if (facingLeft == false)
             {
@@ -43,7 +42,7 @@ public class Movement : MonoBehaviour
             }
 
             //get the GameObject's Rigidbody2D component and set its velocity to be to the right at the given speed
-            _rb.AddForce(new Vector2(1,0) * speed);
+            _rb.AddForce(new Vector2(1, 0) * speed);
 
             if (facingLeft == true)
             {
@@ -60,7 +59,7 @@ public class Movement : MonoBehaviour
             }
 
             //get the GameObject's Rigidbody2D component and set its velocity to be up at the given speed
-            _rb.AddForce(new Vector2(0,1) * speed);
+            _rb.AddForce(new Vector2(0, 1) * speed);
         }
 
         if (Input.GetKey(down)) //check for the player HOLDING DOWN the down button
@@ -71,7 +70,7 @@ public class Movement : MonoBehaviour
             }
 
             //get the GameObject's Rigidbody2D component and set its velocity to be down at the given speed
-            _rb.AddForce(new Vector2(0,-1) * speed);
+            _rb.AddForce(new Vector2(0, -1) * speed);
         }
     }
 }
