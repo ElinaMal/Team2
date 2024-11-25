@@ -62,10 +62,10 @@ public class Health : MonoBehaviour
         anim.ResetTrigger("isHurt");
         anim.SetBool("isDying", true);
         isDead = true;
-        //if (GetComponent<MonsterMovement>() != null)
-        //{
-        //    GetComponent<MonsterMovement>().enabled = false;
-        //}
+        if (GetComponent<EnemyMovement>() != null)
+        {
+            GetComponent<EnemyMovement>().enabled = false;
+        }
         if (GetComponent<Movement>() != null)
         {
             GetComponent<Movement>().enabled = false;
