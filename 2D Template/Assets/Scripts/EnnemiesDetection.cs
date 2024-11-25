@@ -58,13 +58,5 @@ public class EnnemiesDetection : MonoBehaviour
         float step = moveSpeed * Time.deltaTime; // Calculate the distance to move
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
     }
-
-    private void OnDrawGizmos()
-    {
-        // Visualize the detection radius in the editor
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
-    }
-
 }
 
