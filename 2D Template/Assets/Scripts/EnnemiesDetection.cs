@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 
-public class EnemyDetection : MonoBehaviour
+public class EnnemiesDetection : MonoBehaviour
 
 {
     public Transform player; // Reference to the player object
@@ -28,8 +28,6 @@ public class EnemyDetection : MonoBehaviour
         MoveToPosition(targetPosition);
     }
 
-
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform == player)
@@ -39,8 +37,6 @@ public class EnemyDetection : MonoBehaviour
         }
 
     }
-
-
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -52,40 +48,22 @@ public class EnemyDetection : MonoBehaviour
 
     }
 
-
-
     private void MoveToPosition(Vector3 targetPosition)
 
     {
-
         // Calculate direction to the target position
-
         Vector3 direction = (targetPosition - transform.position).normalized;
 
-
-
         // Move towards the target position
-
         float step = moveSpeed * Time.deltaTime; // Calculate the distance to move
-
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-
-
-
     }
 
-
-
     private void OnDrawGizmos()
-
     {
-
         // Visualize the detection radius in the editor
-
         Gizmos.color = Color.red;
-
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
-
     }
 
 }
