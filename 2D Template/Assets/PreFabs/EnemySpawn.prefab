@@ -47,3 +47,4 @@ MonoBehaviour:
   enemyPrefab: {fileID: 5807890615252592704, guid: 6763ffe2fec79a74faa03e999571da4f, type: 3}
   minSpawnTime: 2
   maxSpawnTime: 5
+  spawn: {fileID: 46710952899710030, guid: 4117ab592277f5f4fbef4e0be3e471ff, type: 3}
