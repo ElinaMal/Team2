@@ -8,7 +8,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float minSpawnTime;
     [SerializeField] private float maxSpawnTime;
-    [SerializeField] Score numberEnemies;
+    public EnemyNumberTracker enemyNumber;
     private float timeUntilSpawn;
 
     // Start is called before the first frame update
@@ -21,13 +21,14 @@ public class EnemySpawn : MonoBehaviour
     void Update()
     {
         timeUntilSpawn -= Time.deltaTime;
-        /*
-        if (timeUntilSpawn <= 0 && numberEnemies < 50)
+        
+        if (timeUntilSpawn <= 0 && enemyNumber.enemyCounter < 100)
         {
             Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            enemyNumber.enemyCounter++;
             setTimeUntilSpawn();
         }
-        */
+        
     }
 
     void setTimeUntilSpawn()
