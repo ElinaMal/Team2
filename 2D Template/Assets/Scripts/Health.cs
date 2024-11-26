@@ -9,9 +9,12 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int MAX_HEALTH = 100;
 
-    
 
+
+    /*
     public Animator anim;
+    */
+
     public bool isDead = false;
 
     // Update is called once per frame
@@ -22,7 +25,10 @@ public class Health : MonoBehaviour
 
     public void Damage(int amount)
     {
+        /*
         anim.SetTrigger("isHurt");
+        */
+
         if(amount < 0)
         {
             throw new System.ArgumentOutOfRangeException("Cannot Have Negative Damage");
@@ -62,17 +68,23 @@ public class Health : MonoBehaviour
     private void Die()
     {
         Debug.Log("I am Dead!");
+
+        /*
         anim.ResetTrigger("isHurt");
         anim.SetBool("isDying", true);
+        */
+
         isDead = true;
-        
+
         if (GetComponent<EnemyMovement>() != null)
         {
             GetComponent<EnemyMovement>().enabled = false;
+            Destroy(gameObject);
         }
         if (GetComponent<Movement>() != null)
         {
             GetComponent<Movement>().enabled = false;
+            Destroy(gameObject);
         }
     }
 

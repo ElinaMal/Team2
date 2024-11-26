@@ -12,7 +12,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float enemyVelocity;
     [SerializeField] private Vector2 movementDirection;
     [SerializeField] private Vector2 movement;
-    [SerializeField] private float maxSpeed = 15;
 
     private Rigidbody2D _rb;
     // Start is called before the first frame update
@@ -34,27 +33,7 @@ public class EnemyMovement : MonoBehaviour
             FindMovement();
         }
 
-        if (_rb.velocity.x < -maxSpeed)
-        {
-            _rb.velocity = new Vector2(-maxSpeed, _rb.velocity.y);
-        }
-
-        if (_rb.velocity.x > maxSpeed)
-        {
-            _rb.velocity = new Vector2(maxSpeed, _rb.velocity.y);
-        }
-
-        if (_rb.velocity.y < -maxSpeed)
-        {
-            _rb.velocity = new Vector2(_rb.velocity.x, -maxSpeed);
-        }
-
-        if (_rb.velocity.x > maxSpeed)
-        {
-            _rb.velocity = new Vector2(_rb.velocity.x, maxSpeed);
-        }
-
-        _rb.AddForce(new Vector2(movement.x, movement.y));
+        _rb.velocity= new Vector2(movement.x, movement.y);
     }
 
     void FindMovement()
