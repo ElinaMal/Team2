@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] public int health = 100;
 
     [SerializeField] private int MAX_HEALTH = 100;
+
+    
 
     public Animator anim;
     public bool isDead = false;
@@ -62,6 +65,7 @@ public class Health : MonoBehaviour
         anim.ResetTrigger("isHurt");
         anim.SetBool("isDying", true);
         isDead = true;
+        
         if (GetComponent<EnemyMovement>() != null)
         {
             GetComponent<EnemyMovement>().enabled = false;
