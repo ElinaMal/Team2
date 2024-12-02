@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int MAX_HEALTH = 100;
 
+    [SerializeField] public int defense = 1;
 
 
     /*
@@ -29,12 +30,17 @@ public class Health : MonoBehaviour
         anim.SetTrigger("isHurt");
         */
 
-        if(amount < 0)
+        if (amount < 0)
         {
             throw new System.ArgumentOutOfRangeException("Cannot Have Negative Damage");
         }
 
-        this.health -= amount;
+        if (amount - defense <= 0)
+        {
+            throw new System.ArgumentOutOfRangeException("Armor fully negated damage");
+        }
+
+        this.health -= amount - defense;
 
         //if (GetComponent<Hearts>() != null)
         //{

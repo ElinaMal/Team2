@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SimonAttackArea : MonoBehaviour
 {
-    private int damage = 3;
+    [SerializeField] private int damage = 3;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
