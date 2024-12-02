@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraSmoothFollow : MonoBehaviour
 {
-   [SerializeField] private float damping;
+    [SerializeField] private float damping;
     [SerializeField] private Vector3 offset;
     public Transform target;
     private Vector3 vel = Vector3.zero;

@@ -52,7 +52,7 @@ public class EnemyMovement : MonoBehaviour
         Debug.Log("It started");
         wait = true;
         _rb.velocity = new Vector2(0, 0);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.6f);
         wait = false;
     }
 }
