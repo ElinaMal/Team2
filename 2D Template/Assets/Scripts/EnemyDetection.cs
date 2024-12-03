@@ -4,35 +4,39 @@ using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
 {
-    private bool detected = false;
-    public EnemyChasing target;
+    public bool detected;
+    public Vector2 directionToPlayer;
+    public Transform target;
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void Start()
+    {
+        target = GameObject.Find("Square").transform;
+    }
+
+    private void OnTriggerStay2D(Collider2D collider)
     {
         detected = true;
         
         if (detected)
         {
-            target.targetting = collider.gameObject.transform;
+            target = collider.gameObject.transform;
         }
         else
         {
-            target.targetting = null;
+            target = GameObject.Find("Square").transform;
         }
         
     }
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+            detected = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        detected = false;
+        Vector2 enemyToPlayerVector = target.position - transform.position;
+        directionToPlayer = enemyToPlayerVector.normalized;
     }
 }
