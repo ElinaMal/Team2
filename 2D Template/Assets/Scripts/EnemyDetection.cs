@@ -10,12 +10,16 @@ public class EnemyDetection : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         detected = true;
-        /*
+        
         if (detected)
         {
-            target.targetting = collider.gameObject;
+            target.targetting = collider.gameObject.transform;
         }
-        */
+        else
+        {
+            target.targetting = null;
+        }
+        
     }
 
 

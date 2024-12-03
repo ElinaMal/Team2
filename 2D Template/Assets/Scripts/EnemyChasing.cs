@@ -16,6 +16,8 @@ public class EnemyChasing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         navMeshAgent.destination = targetting.position;
+        */
     }
 }
