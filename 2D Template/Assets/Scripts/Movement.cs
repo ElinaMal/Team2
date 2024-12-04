@@ -5,6 +5,7 @@ public class Movement : MonoBehaviour
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S;
     public float speed = 8, maxSpeed = 15;
     bool facingLeft = false;
+    public Animator anim;
 
     private Rigidbody2D _rb;
 
@@ -19,6 +20,8 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(left)) //check for the player HOLDING DOWN the left button
         {
+            anim.SetBool("isMoving", true);
+
             if (_rb.velocity.x < -maxSpeed) //sets a limit for speed
             {
                 _rb.velocity = new Vector2(-maxSpeed, _rb.velocity.y);
@@ -36,6 +39,8 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(right)) //check for the player HOLDING DOWN the right button
         {
+            anim.SetBool("isMoving", true);
+
             if (_rb.velocity.x > maxSpeed) //sets a limit for speed
             {
                 _rb.velocity = new Vector2(maxSpeed, _rb.velocity.y);
@@ -53,6 +58,8 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(up)) //check for the player HOLDING DOWN the up button
         {
+            anim.SetBool("isMoving", true);
+
             if (_rb.velocity.y > maxSpeed) //sets a limit for speed
             {
                 _rb.velocity = new Vector2(_rb.velocity.x, maxSpeed);
@@ -64,6 +71,8 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(down)) //check for the player HOLDING DOWN the down button
         {
+            anim.SetBool("isMoving", true);
+
             if (_rb.velocity.y < -maxSpeed) //sets a limit for speed
             {
                 _rb.velocity = new Vector2(_rb.velocity.x, -maxSpeed);
@@ -71,6 +80,26 @@ public class Movement : MonoBehaviour
 
             //get the GameObject's Rigidbody2D component and set its velocity to be down at the given speed
             _rb.AddForce(new Vector2(0, -1) * speed);
+        }
+
+        if (Input.GetKeyUp(left))
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+        if (Input.GetKeyUp(right))
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+        if (Input.GetKeyUp(up))
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+        if (Input.GetKeyUp(down))
+        {
+            anim.SetBool("isMoving", false);
         }
     }
 }
