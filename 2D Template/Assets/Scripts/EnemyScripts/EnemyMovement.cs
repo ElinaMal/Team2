@@ -10,6 +10,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Vector2 movement;
     private bool wait = false;
 
+    private bool facingLeft = false;
+
     private Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,9 @@ public class EnemyMovement : MonoBehaviour
         if (wait == false)
         {
             _rb.velocity = new Vector2(movement.x, movement.y);
+            /*
+            if ()
+            */
         }
     }
 
