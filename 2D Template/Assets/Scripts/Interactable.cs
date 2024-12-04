@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,19 +23,19 @@ public class Interactable : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"));
-        {
             isInRange = true;
+        if (collision.gameObject.CompareTag("Player"))
+        {
             Debug.Log("Player now in range");
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) ;
-        {
             isInRange = false;
+        if (collision.gameObject.CompareTag("Player"))
+        {
             Debug.Log("Player not in range");
         }
     }
