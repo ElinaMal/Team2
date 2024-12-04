@@ -17,12 +17,12 @@ public class EnemyChasing : MonoBehaviour
     void Update()
     {
         UpdateTargetDirection();
-        SetVelocity();
+        MovementControl();
     }
 
     private void UpdateTargetDirection()
     {
-        if (EnemyDetection.detected)
+        if (EnemyDetection.detected && EnemyDetection.correctTarget)
         {
             transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
             targetDirection = EnemyDetection.directionToPlayer;
@@ -38,20 +38,15 @@ public class EnemyChasing : MonoBehaviour
         
     }
 
-    private void SetVelocity()
+    private void MovementControl()
     {
         if (targetDirection == Vector2.zero)
         {
-            
             GetComponent<EnemyMovement>().enabled = true;
-            
         }
         else
         {
-            
             GetComponent<EnemyMovement>().enabled = false;
-            
-            
         }
     }
 }
