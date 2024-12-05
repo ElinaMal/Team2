@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 1663784031}
   - component: {fileID: 1663784032}
   - component: {fileID: 1663784033}
+  - component: {fileID: 1663784034}
   m_Layer: 0
   m_Name: Player
   m_TagString: GoodGuys
@@ -648,7 +649,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -1113498225, guid: edee54e0533030942a6d5cc14621b334, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -668,7 +669,7 @@ Transform:
   m_GameObject: {fileID: 1663784026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3729, y: 0, z: 0}
-  m_LocalScale: {x: 1.7457, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 776645921}
@@ -692,7 +693,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -719,6 +720,7 @@ MonoBehaviour:
   down: 115
   speed: 8
   maxSpeed: 10
+  anim: {fileID: 1663784034}
 --- !u!114 &1663784033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,6 +733,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab81323d2cb5ac468ff6e44d1a60075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1663784034
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663784026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a3cbf7443aa06241abeda9e2437ec0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2287283315652958541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,11 +775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.48
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.78
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalPosition.z
@@ -765,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalRotation.x
@@ -773,7 +795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalRotation.z
@@ -785,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2287283316397982103, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
