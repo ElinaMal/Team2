@@ -91,25 +91,9 @@ public class Movement : MonoBehaviour
             _rb.AddForce(new Vector2(0, -1) * speed);
         }
         
-        if (Input.GetKeyUp(left))
+        if (!Input.GetKey(up) && !Input.GetKey(down) && !Input.GetKey(left) && !Input.GetKey(right))
         {
             anim.SetBool("isMoving", false);
         }
-
-        if (Input.GetKeyUp(right))
-        {
-            anim.SetBool("isMoving", false);
-        }
-
-        if (Input.GetKeyUp(up))
-        {
-            anim.SetBool("isMoving", false);
-        }
-
-        if (Input.GetKeyUp(down))
-        {
-            anim.SetBool("isMoving", false);
-        }
-        
     }
 }

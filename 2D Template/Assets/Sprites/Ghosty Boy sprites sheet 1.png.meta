@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: edee54e0533030942a6d5cc14621b334
+guid: 4c1ee99480fbffc4eb108dae39562b81
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ghosty Boy sprites sheet_0
+      name: Ghosty Boy sprites sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3bd1437b75b8134189be66bbe375525
-      internalID: -1113498225
+      spriteID: a35b287a8211baa45b64af90f46e7cbb
+      internalID: 1631153076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghosty Boy sprites sheet_1
+      name: Ghosty Boy sprites sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a4353cb7f279494e8464a1836883414
-      internalID: -1961134541
+      spriteID: 4b60bdd6dacdbc74c9cc418555e3274c
+      internalID: 1890444288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghosty Boy sprites sheet_2
+      name: Ghosty Boy sprites sheet 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e0bd2530834c62458d723968a4058d8
-      internalID: 922928282
+      spriteID: 2b23762ea4ffc4d40a31d01da11e2b8b
+      internalID: -206363782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghosty Boy sprites sheet_3
+      name: Ghosty Boy sprites sheet 1_3
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48ee9a22f9640b740bf1ab2258592c19
-      internalID: -1679806314
+      spriteID: 11eac9af65920aa4088f1c2f9403f0ab
+      internalID: 656425866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghosty Boy sprites sheet_4
+      name: Ghosty Boy sprites sheet 1_4
       rect:
         serializedVersion: 2
         x: 64
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc723040b7c9c464184133c410c97d72
-      internalID: 1074018926
+      spriteID: b96ac9bfd809c2440b9c0d28e4b06195
+      internalID: 1810168092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghosty Boy sprites sheet_5
+      name: Ghosty Boy sprites sheet 1_5
       rect:
         serializedVersion: 2
         x: 128
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92a57ccab3ce45848a1abb86484d2d88
-      internalID: 1084705506
+      spriteID: 7f192e3e8546750418fbe6675fffddc9
+      internalID: 504590667
       vertices: []
       indices: 
       edges: []
@@ -267,12 +267,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ghosty Boy sprites sheet_3: -1679806314
-      Ghosty Boy sprites sheet_2: 922928282
-      Ghosty Boy sprites sheet_0: -1113498225
-      Ghosty Boy sprites sheet_1: -1961134541
-      Ghosty Boy sprites sheet_5: 1084705506
-      Ghosty Boy sprites sheet_4: 1074018926
+      Ghosty Boy sprites sheet 1_1: 1890444288
+      Ghosty Boy sprites sheet 1_0: 1631153076
+      Ghosty Boy sprites sheet 1_4: 1810168092
+      Ghosty Boy sprites sheet 1_5: 504590667
+      Ghosty Boy sprites sheet 1_3: 656425866
+      Ghosty Boy sprites sheet 1_2: -206363782
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
