@@ -36,9 +36,17 @@ public class EnemyMovement : MonoBehaviour
         if (wait == false)
         {
             _rb.velocity = new Vector2(movement.x, movement.y);
-            /*
-            if ()
-            */
+
+            if (movement.x > 0 && facingLeft == true)
+            {
+                facingLeft = false;
+                transform.Rotate(0, 180, 0);
+            }
+            else if (movement.x < 0 && facingLeft == false)
+            {
+                facingLeft = true;
+                transform.Rotate(0, 180, 0);
+            }
         }
     }
 

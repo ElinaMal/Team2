@@ -7,6 +7,7 @@ public class EnemyChasing : MonoBehaviour
     private Rigidbody2D rigidBody;
     public EnemyDetection EnemyDetection;
     private Vector2 targetDirection;
+    private bool facingLeft = false;
 
     private void Awake()
     {
@@ -18,6 +19,9 @@ public class EnemyChasing : MonoBehaviour
     {
         UpdateTargetDirection();
         MovementControl();
+        /*
+        Rotation();
+        */
     }
 
     private void UpdateTargetDirection()
@@ -35,7 +39,16 @@ public class EnemyChasing : MonoBehaviour
 
     private void Rotation()
     {
-        
+        if (targetDirection.x > 0 && facingLeft == true)
+        {
+            facingLeft = false;
+            transform.Rotate(0, 180, 0);
+        }
+        else if (targetDirection.x < 0 && facingLeft == false)
+        {
+            facingLeft = true;
+            transform.Rotate(0, 180, 0);
+        }
     }
 
     private void MovementControl()
