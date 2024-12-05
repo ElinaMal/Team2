@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyChasing : MonoBehaviour
@@ -7,6 +8,9 @@ public class EnemyChasing : MonoBehaviour
     private Rigidbody2D rigidBody;
     public EnemyDetection EnemyDetection;
     private Vector2 targetDirection;
+    public EnemyMovement enemyMovement;
+    private bool facingLeft;
+    private bool ran = false;
 
     private void Awake()
     {
@@ -18,6 +22,8 @@ public class EnemyChasing : MonoBehaviour
     {
         UpdateTargetDirection();
         MovementControl();
+        Rotation();
+        
     }
 
     private void UpdateTargetDirection()
@@ -35,7 +41,16 @@ public class EnemyChasing : MonoBehaviour
 
     private void Rotation()
     {
-        
+        if (EnemyDetection.directionToPlayer.x > 0 && facingLeft == true)
+        {
+            facingLeft = false;
+            transform.Rotate(0, 180, 0);
+        }
+        else if (EnemyDetection.directionToPlayer.x < 0 && facingLeft == false)
+        {
+            facingLeft = true;
+            transform.Rotate(0, 180, 0);
+        }
     }
 
     private void MovementControl()
@@ -43,9 +58,17 @@ public class EnemyChasing : MonoBehaviour
         if (targetDirection == Vector2.zero)
         {
             GetComponent<EnemyMovement>().enabled = true;
+            ran = false;
         }
         else
         {
+            
+            if (ran == false)
+            {
+                facingLeft = enemyMovement.FacingLeft;
+            }
+
+            ran = true;
             GetComponent<EnemyMovement>().enabled = false;
         }
     }
