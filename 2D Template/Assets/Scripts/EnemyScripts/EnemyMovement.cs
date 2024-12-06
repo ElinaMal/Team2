@@ -10,17 +10,14 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Vector2 movement;
     private bool wait = false;
 
-    public bool FacingLeft;
+    public bool FacingLeft = false;
 
     private Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        if (transform.position.x > 0)
-        {
-            FacingLeft = true;
-        }
+        transform.rotation = Quaternion.Euler(0, 0, 0);
         directionChangeTime = UnityEngine.Random.Range(5.0f, 10.0f);
         lastDirectionChange = 0f;
         FindMovement();
@@ -44,12 +41,12 @@ public class EnemyMovement : MonoBehaviour
             if (movement.x > 0 && FacingLeft == true)
             {
                 FacingLeft = false;
-                transform.Rotate(0, 180, 0);
+                GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (movement.x < 0 && FacingLeft == false)
             {
                 FacingLeft = true;
-                transform.Rotate(0, 180, 0);
+                GetComponent<SpriteRenderer>().flipX = true;
             }
         }
     }
