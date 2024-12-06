@@ -38,17 +38,21 @@ public class EnemyChasing : MonoBehaviour
 
     private void Rotation()
     {
-        transform.rotation = Quaternion.Euler(0, 0, 0);
-
         if (targetDirection.x > 0 && facingLeft == true)
         {
             facingLeft = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            /*
             GetComponent<SpriteRenderer>().flipX = false;
+            */
         }
         else if (targetDirection.x < 0 && facingLeft == false)
         {
             facingLeft = true;
+            transform.rotation = Quaternion.Euler(0, -180, 0);
+            /*
             GetComponent<SpriteRenderer>().flipX = true;
+            */
         }
     }
 
