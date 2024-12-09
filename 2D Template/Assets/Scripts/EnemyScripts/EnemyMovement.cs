@@ -3,13 +3,17 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private float lastDirectionChange;
-    [SerializeField] private float directionChangeTime;
+    private float lastDirectionChange;
+    private float directionChangeTime;
     [SerializeField] private float enemyVelocity;
-    [SerializeField] private Vector2 movementDirection;
-    [SerializeField] private Vector2 movement;
-    private bool wait = false;
+    private Vector2 movementDirection;
+    private Vector2 movement;
 
+    [SerializeField] private float changeTimeMin;
+    [SerializeField] private float changeTimeMax;
+    [SerializeField] private float waitTime;
+
+    private bool wait = false;
     public bool FacingLeft = false;
 
     private Rigidbody2D _rb;
@@ -18,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        directionChangeTime = UnityEngine.Random.Range(5.0f, 10.0f);
+        directionChangeTime = UnityEngine.Random.Range(changeTimeMin, changeTimeMax);
         lastDirectionChange = 0f;
         FindMovement();
     }
@@ -30,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
         {
             StartCoroutine(StandingStill());
             lastDirectionChange = Time.time;
-            directionChangeTime = UnityEngine.Random.Range(5.0f, 10.0f);
+            directionChangeTime = UnityEngine.Random.Range(changeTimeMin, changeTimeMax);
             FindMovement();
         }
 
@@ -67,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
     {
         wait = true;
         _rb.velocity = new Vector2(0, 0);
-        yield return new WaitForSeconds(2.6f);
+        yield return new WaitForSeconds(waitTime);
         wait = false;
     }
 }
