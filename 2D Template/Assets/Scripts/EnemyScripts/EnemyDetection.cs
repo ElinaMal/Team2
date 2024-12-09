@@ -8,6 +8,8 @@ public class EnemyDetection : MonoBehaviour
     public bool correctTarget = false;
     public object check;
 
+    [SerializeField] private string targetTag;
+
     void Start()
     {
         target = GameObject.Find("Player").transform;
@@ -19,13 +21,13 @@ public class EnemyDetection : MonoBehaviour
         
         if (detected)
         {
-            if (collider.gameObject.CompareTag("GoodGuys"))
+            if (collider.gameObject.CompareTag(targetTag))
             {
                 target = collider.gameObject.transform;
                 correctTarget = true;
             }
         }
-        else if (collider.tag != "GoodGuys")
+        else if (collider.tag != targetTag)
         {
             
         }
