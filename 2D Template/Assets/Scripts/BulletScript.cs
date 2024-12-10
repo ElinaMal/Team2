@@ -11,6 +11,8 @@ public class BulletScript : MonoBehaviour
 
     private AnimationCurve trajectoryAnimationCurve;
 
+    private Vector3 trajectoryStartPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +24,21 @@ public class BulletScript : MonoBehaviour
         rb.velocity = new Vector2 (direction.x, direction.y).normalized * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+        trajectoryStartPoint = transform.position;
+    }
+
+    private void UpdateProjectilePosition()
+    {
+
     }
 
     public void InitializeAnimationCurves(AnimationCurve trajectoryAnimationCurve)
     {
         this.trajectoryAnimationCurve = trajectoryAnimationCurve;
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateProjectilePosition();
     }
 }

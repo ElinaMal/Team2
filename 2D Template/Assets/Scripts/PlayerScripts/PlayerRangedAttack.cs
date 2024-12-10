@@ -45,8 +45,8 @@ public class PlayerRangedAttack : MonoBehaviour
         if (Input.GetKey(Shoot) && canFire)
         {
             canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
-            //BulletScript.InitializeAnimationCurves(trajectoryAnimationCurve)
+            BulletScript bulletScript = Instantiate(bullet, bulletTransform.position, Quaternion.identity).GetComponent<BulletScript>();
+            bulletScript.InitializeAnimationCurves(trajectoryAnimationCurve);
         }
     }
 }
