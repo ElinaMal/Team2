@@ -26,17 +26,17 @@ public class Interactable : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
             isInRange = true;
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("GoodGuys"))
         {
-            Debug.Log("Player now in range");
+            Debug.Log("GoodGuys now in range");
         }
     }
     public void OnCollisionExit2D(Collision2D collision)
     {
             isInRange = false;
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("GoodGuys"))
         {
-            Debug.Log("Player not in range");
+            Debug.Log("GoodGuys not in range");
         }
     }
 }
