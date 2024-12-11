@@ -46,17 +46,11 @@ public class EnemyMovement : MonoBehaviour
             {
                 FacingLeft = false;
                 transform.rotation = Quaternion.Euler(0, 0, 0);
-                /*
-                GetComponent<SpriteRenderer>().flipX = false;
-                */
             }
             else if (movement.x < 0 && FacingLeft == false)
             {
                 FacingLeft = true;
                 transform.rotation = Quaternion.Euler(0, -180, 0);
-                /*
-                GetComponent<SpriteRenderer>().flipX = false;
-                */
             }
         }
     }

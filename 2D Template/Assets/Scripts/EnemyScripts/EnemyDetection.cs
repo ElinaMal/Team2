@@ -6,7 +6,6 @@ public class EnemyDetection : MonoBehaviour
     public Vector2 directionToPlayer;
     public Transform target;
     public bool correctTarget = false;
-    public object check;
 
     [SerializeField] private string targetTag;
 
@@ -23,13 +22,16 @@ public class EnemyDetection : MonoBehaviour
         {
             if (collider.gameObject.CompareTag(targetTag))
             {
+                if (gameObject.CompareTag("GoodGuys"))
+                {
+                    GetComponent<UndeadToPlayer>().enabled = false;
+
+                    GetComponent<EnemyMovement>().enabled = false;
+                }
+
                 target = collider.gameObject.transform;
                 correctTarget = true;
             }
-        }
-        else if (collider.tag != targetTag)
-        {
-            
         }
         else
         {
@@ -49,5 +51,10 @@ public class EnemyDetection : MonoBehaviour
     {
         Vector2 enemyToPlayerVector = target.position - transform.position;
         directionToPlayer = enemyToPlayerVector.normalized;
+
+        if (gameObject.CompareTag("GoodGuys"))
+        {
+            GetComponent<UndeadToPlayer>().enabled = true;
+        }
     }
 }
