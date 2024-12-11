@@ -171,31 +171,100 @@ MonoBehaviour:
   bullet: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
   bulletTransform: {fileID: 1599803040}
   canFire: 1
-  timeBetweenFiring: 0.3
+  timeBetweenFiring: 0.1
   Shoot: 323
+  projectileMaxHeight: 2
+  distanceToTargetToDestroyProjectile: 0
+  maxMoveSpeed: 5
   trajectoryAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.000034913188
+      value: 0.00004103256
+      inSlope: 0.78805643
+      outSlope: 0.78805643
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25348738
+      value: 0.1998309
+      inSlope: -0.0040625334
+      outSlope: -0.0040625334
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7603002
+      value: -0.20368408
+      inSlope: 0.026930094
+      outSlope: 0.026930094
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9999651
+      value: 0.00004103256
+      inSlope: 0.8500417
+      outSlope: 0.8500417
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  axisCorrectionAnimationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.9987174
-      value: -0.003202646
-      inSlope: 2.0029695
-      outSlope: 0
-      tangentMode: 1
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0.10533676
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
-    m_PostInfinity: 1
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!1 &1057658358
 GameObject:

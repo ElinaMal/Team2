@@ -12,8 +12,13 @@ public class PlayerRangedAttack : MonoBehaviour
     private float timer;
     public float timeBetweenFiring;
     public KeyCode Shoot = KeyCode.Mouse0;
+    [SerializeField] private float projectileMaxHeight;
+    [SerializeField] private float distanceToTargetToDestroyProjectile;
+    [SerializeField] private float maxMoveSpeed;
 
     [SerializeField] private AnimationCurve trajectoryAnimationCurve;
+    [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
+    [SerializeField] private AnimationCurve speedAnimationCurve;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +51,8 @@ public class PlayerRangedAttack : MonoBehaviour
         {
             canFire = false;
             BulletScript bulletScript = Instantiate(bullet, bulletTransform.position, Quaternion.identity).GetComponent<BulletScript>();
-            bulletScript.InitializeAnimationCurves(trajectoryAnimationCurve);
+            bulletScript.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, speedAnimationCurve);
+            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed);
         }
     }
 }
