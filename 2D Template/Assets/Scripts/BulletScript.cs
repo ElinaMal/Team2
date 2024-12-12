@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    //[SerializeField] private BulletVisual bulletVisual;
+
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;
@@ -17,6 +20,13 @@ public class BulletScript : MonoBehaviour
     private AnimationCurve speedAnimationCurve;
 
     private Vector3 trajectoryStartPoint;
+    private Vector3 projectileMoveDir;
+    private Vector3 trajectoryRange;
+
+    private float nextYTrajectoryPosition;
+    private float nextXTrajectoryPosition;
+    private float nextPositionYCorrection;
+    private float nextPositionXCorrection;
 
     // Start is called before the first frame update
     void Start()
@@ -34,24 +44,85 @@ public class BulletScript : MonoBehaviour
 
     private void UpdateProjectilePosition()
     {
-        Vector3 trajectoryRange = mousePos - trajectoryStartPoint;
+        trajectoryRange = mousePos - trajectoryStartPoint;
 
-        if (trajectoryRange.x < 0)
+        //Debug.Log(trajectoryMaxRelativeHeight);
+
+        if (Mathf.Abs(trajectoryRange.normalized.x) < Mathf.Abs(trajectoryRange.normalized.y))
         {
-            force = -force;
+            //Projectile curved on X axis
+
+            if (trajectoryRange.y < 0)
+            {
+                force = -force;
+            }
+
+            UpdatePositionWithXCurve();
+        }
+        else
+        {
+            //Projectile curved on Y axis
+
+            if (trajectoryRange.x < 0)
+            {
+                force = -force;
+            }
+
+            UpdatePositionWithYCurve();
+        }
+    }
+    private void UpdatePositionWithXCurve()
+    {
+        float nextPositionY = transform.position.y + force * Time.deltaTime;
+        float nextPositionYNormalized = (nextPositionY - trajectoryStartPoint.y) / trajectoryRange.y;
+
+        //Debug.Log(nextPositionYNormalized);
+
+        float nextPositionXNormalized = trajectoryAnimationCurve.Evaluate(nextPositionYNormalized);
+
+        //Debug.Log(nextPositionXNormalized);
+
+        nextXTrajectoryPosition = nextPositionXNormalized * trajectoryMaxRelativeHeight;
+
+
+        float nextPositionXCorrectionNormalized = axisCorrectionAnimationCurve.Evaluate(nextPositionYNormalized);
+        nextPositionXCorrection = nextPositionXCorrectionNormalized * trajectoryRange.x;
+
+        if(trajectoryRange.x > 0 && trajectoryRange.y > 0)
+        {
+            nextXTrajectoryPosition = -nextXTrajectoryPosition;
         }
 
+        if (trajectoryRange.x < 0 && trajectoryRange.y < 0)
+        {
+            nextXTrajectoryPosition = -nextXTrajectoryPosition;
+        }
+
+        float nextPositionX = trajectoryStartPoint.x + nextXTrajectoryPosition + nextPositionXCorrection;
+
+        Vector3 nextPosition = new Vector3(nextPositionX, nextPositionY, 0);
+
+        CalculateNextProjectileSpeed(nextPositionYNormalized);
+        projectileMoveDir = nextPosition - transform.position;
+
+        transform.position = nextPosition;
+    }
+    private void UpdatePositionWithYCurve()
+    {
         float nextPositionX = transform.position.x + force * Time.deltaTime;
         float nextPositionXNormalized = (nextPositionX - trajectoryStartPoint.x) / trajectoryRange.x;
 
         float nextPositionYNormalized = trajectoryAnimationCurve.Evaluate(nextPositionXNormalized);
+        nextYTrajectoryPosition = nextPositionYNormalized * trajectoryMaxRelativeHeight;
+
         float nextPositionYCorrectionNormalized = axisCorrectionAnimationCurve.Evaluate(nextPositionXNormalized);
-        float nextPositionYCorrection = nextPositionYCorrectionNormalized * trajectoryRange.y;
-        float nextPositionY = trajectoryStartPoint.y + nextPositionYNormalized * trajectoryMaxRelativeHeight + nextPositionYCorrection;
+        nextPositionYCorrection = nextPositionYCorrectionNormalized * trajectoryRange.y;
+        float nextPositionY = trajectoryStartPoint.y + nextYTrajectoryPosition + nextPositionYCorrection;
 
         Vector3 nextPosition = new Vector3(nextPositionX, nextPositionY, 0);
 
         CalculateNextProjectileSpeed(nextPositionXNormalized);
+        projectileMoveDir = nextPosition - transform.position;
 
         transform.position = nextPosition;
     }
@@ -71,10 +142,20 @@ public class BulletScript : MonoBehaviour
 
     public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed)
     {
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         float xDistanceToTarget = mousePos.x - transform.position.x;
         this.trajectoryMaxRelativeHeight = Mathf.Abs(xDistanceToTarget) * trajectoryMaxHeight;
+        Debug.Log(Mathf.Abs(xDistanceToTarget));
         this.distanceToTargetToDestroyProjectile = distanceToTargetToDestroyProjectile;
         this.maxMoveSpeed = maxMoveSpeed;
+
+        //bulletVisual.SetTarget(mousePos);
+    }
+
+    public Vector3 GetProjectileMoveDir()
+    {
+        return projectileMoveDir;
     }
 
     // Update is called once per frame
