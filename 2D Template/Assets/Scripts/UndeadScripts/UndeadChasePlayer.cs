@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class UndeadChasePlayer : MonoBehaviour

@@ -26,6 +26,8 @@ public class EnemyDetection : MonoBehaviour
                 {
                     GetComponent<UndeadToPlayer>().enabled = false;
 
+                    GetComponent<UndeadChasePlayer>().enabled = false;
+
                     GetComponent<EnemyMovement>().enabled = false;
                 }
 
@@ -55,6 +57,8 @@ public class EnemyDetection : MonoBehaviour
         if (gameObject.CompareTag("GoodGuys"))
         {
             GetComponent<UndeadToPlayer>().enabled = true;
+
+            GetComponent<UndeadChasePlayer>().enabled = true;
         }
     }
 }

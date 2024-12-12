@@ -1,16 +1,23 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class UndeadToPlayer : MonoBehaviour
 {
     public bool detected = false;
     public Vector2 directionToPlayer;
     public Transform target;
-
     public bool correctTarget = false;
+    public List<string> detectedObjects;
 
     void Start()
     {
         target = GameObject.Find("Player").transform;
+        List<string> detectedObjects = new List<string>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        detectedObjects.Add(collision.gameObject.name);
     }
 
     private void OnTriggerStay2D(Collider2D collider)
@@ -19,7 +26,7 @@ public class UndeadToPlayer : MonoBehaviour
 
         if (detected) 
         {
-            if (collider.gameObject == target)
+            if (detectedObjects.Contains("Player"))
             {
                 correctTarget = true;
             }
@@ -33,6 +40,7 @@ public class UndeadToPlayer : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         detected = false;
+        detectedObjects.Remove(collision.gameObject.name);
     }
 
     // Update is called once per frame
