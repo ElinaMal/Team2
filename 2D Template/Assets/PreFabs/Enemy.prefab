@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6769340600841707529}
   m_Layer: 0
   m_Name: AttackRange
-  m_TagString: Untagged
+  m_TagString: BadGuysZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 2831883583558987273}
   m_Layer: 0
   m_Name: PlayerDetection
-  m_TagString: Untagged
+  m_TagString: BadGuysZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,4 +404,6 @@ MonoBehaviour:
   directionToPlayer: {x: 0, y: 0}
   target: {fileID: 5807890615252592710}
   correctTarget: 0
+  undeadToPlayer: {fileID: 0}
+  closeEnough: 0
   targetTag: GoodGuys
