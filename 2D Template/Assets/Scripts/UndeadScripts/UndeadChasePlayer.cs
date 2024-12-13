@@ -38,6 +38,7 @@ public class UndeadChasePlayer : MonoBehaviour
 
     private void Rotation()
     {
+        /*
         if (targetDirection.x > 0 && facingLeft == true)
         {
             facingLeft = false;
@@ -48,6 +49,7 @@ public class UndeadChasePlayer : MonoBehaviour
             facingLeft = true;
             transform.rotation = Quaternion.Euler(0, -180, 0);
         }
+        */
     }
 
     private void MovementControl()

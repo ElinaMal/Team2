@@ -27,8 +27,19 @@ public class EnemyChasing : MonoBehaviour
     {
         if (EnemyDetection.detected && EnemyDetection.correctTarget)
         {
-            transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
-            targetDirection = EnemyDetection.directionToPlayer;
+            if (gameObject.CompareTag("GoodGuys"))
+            {
+                if (EnemyDetection.closeEnough)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
+                    targetDirection = EnemyDetection.directionToPlayer;
+                }
+            }
+            else
+            {
+                transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
+                targetDirection = EnemyDetection.directionToPlayer;
+            }
         }
         else
         {

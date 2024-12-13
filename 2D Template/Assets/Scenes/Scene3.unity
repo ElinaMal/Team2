@@ -133,11 +133,11 @@ GameObject:
   m_Component:
   - component: {fileID: 214847982}
   - component: {fileID: 214847981}
-  - component: {fileID: 214847983}
   - component: {fileID: 214847984}
+  - component: {fileID: 214847983}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: InteractObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,16 +202,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214847980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.32, y: 0.64, z: 0}
-  m_LocalScale: {x: 0.32261935, y: 0.5863287, z: 0.89393}
+  m_LocalPosition: {x: 3.18, y: 0.63, z: 0}
+  m_LocalScale: {x: 0.3941763, y: 0.25534615, z: 0.89393}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 543071495}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &214847983
-BoxCollider2D:
+--- !u!58 &214847983
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -224,18 +223,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Radius: 2.5
 --- !u!114 &214847984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +234,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 214847980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac17450f694c2949bdb7de4f5e78ce3, type: 3}
+  m_Script: {fileID: 11500000, guid: a255bfc6e2557be4c9b90d815738d793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &285735129
@@ -311,84 +300,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c44fa0201bf50a448693aa7248bf095, type: 3}
---- !u!1 &543071493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 543071495}
-  - component: {fileID: 543071494}
-  - component: {fileID: 543071496}
-  m_Layer: 0
-  m_Name: InteractableCircle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &543071494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543071493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e6535d288f3c343bf4347f033463af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isInRange: 0
-  interactObject: 120
-  interactAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 214847981}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_flipY
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!4 &543071495
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543071493}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.04, z: 0}
-  m_LocalScale: {x: 3.423403, y: 1.8836806, z: 1.2355063}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 214847982}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &543071496
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543071493}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &651651111
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,8 +466,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857985497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7899, y: 0.4415, z: 0}
-  m_LocalScale: {x: 0.5556, y: 0.5397, z: 1}
+  m_LocalPosition: {x: 1.8346, y: 0.3789, z: 0}
+  m_LocalScale: {x: 0.60032576, y: 0.6023052, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -6,6 +6,9 @@ public class EnemyDetection : MonoBehaviour
     public Vector2 directionToPlayer;
     public Transform target;
     public bool correctTarget = false;
+    public UndeadToPlayer undeadToPlayer;
+    public WhereIsPlayer whereIsPlayer;
+    public bool closeEnough;
 
     [SerializeField] private string targetTag;
 
@@ -22,13 +25,9 @@ public class EnemyDetection : MonoBehaviour
         {
             if (collider.gameObject.CompareTag(targetTag))
             {
-                if (gameObject.CompareTag("GoodGuys"))
+                if (gameObject.CompareTag("GoodGuysZone") && closeEnough)
                 {
-                    GetComponent<UndeadToPlayer>().enabled = false;
-
-                    GetComponent<UndeadChasePlayer>().enabled = false;
-
-                    GetComponent<EnemyMovement>().enabled = false;
+                    undeadToPlayer.enabled = false;
                 }
 
                 target = collider.gameObject.transform;
@@ -54,11 +53,18 @@ public class EnemyDetection : MonoBehaviour
         Vector2 enemyToPlayerVector = target.position - transform.position;
         directionToPlayer = enemyToPlayerVector.normalized;
 
-        if (gameObject.CompareTag("GoodGuys"))
+        if (gameObject.CompareTag("GoodGuysZone"))
         {
-            GetComponent<UndeadToPlayer>().enabled = true;
+            if (whereIsPlayer.distance < 20)
+            {
+                closeEnough = true;
+            }
+            else
+            {
+                undeadToPlayer.enabled = true;
 
-            GetComponent<UndeadChasePlayer>().enabled = true;
+                closeEnough = false;
+            }
         }
     }
 }
