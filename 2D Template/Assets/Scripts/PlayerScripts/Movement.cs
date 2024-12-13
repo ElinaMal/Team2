@@ -3,7 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public KeyCode left = KeyCode.A, right = KeyCode.D, up = KeyCode.W, down = KeyCode.S;
-    public float speed = 8, maxSpeed = 15;
+    public float maxSpeed = 15;
     bool facingLeft = false;
     public Animator anim;
     
@@ -23,15 +23,9 @@ public class Movement : MonoBehaviour
         {
             
             anim.SetBool("isMoving", true);
-            
 
-            if (_rb.velocity.x < -maxSpeed) //sets a limit for speed
-            {
-                _rb.velocity = new Vector2(-maxSpeed, _rb.velocity.y);
-            }
+            _rb.velocity = new Vector2 (-maxSpeed, _rb.velocity.y);
 
-            //get the GameObject's Rigidbody2D component and set its velocity to be to the left at the given speed
-            _rb.AddForce(new Vector2(-1, 0) * speed);
 
             if (facingLeft == false)
             {
@@ -45,14 +39,7 @@ public class Movement : MonoBehaviour
             
             anim.SetBool("isMoving", true);
             
-
-            if (_rb.velocity.x > maxSpeed) //sets a limit for speed
-            {
-                _rb.velocity = new Vector2(maxSpeed, _rb.velocity.y);
-            }
-
-            //get the GameObject's Rigidbody2D component and set its velocity to be to the right at the given speed
-            _rb.AddForce(new Vector2(1, 0) * speed);
+            _rb.velocity = new Vector2(maxSpeed, _rb.velocity.y);
 
             if (facingLeft == true)
             {
@@ -66,14 +53,7 @@ public class Movement : MonoBehaviour
             
             anim.SetBool("isMoving", true);
             
-
-            if (_rb.velocity.y > maxSpeed) //sets a limit for speed
-            {
-                _rb.velocity = new Vector2(_rb.velocity.x, maxSpeed);
-            }
-
-            //get the GameObject's Rigidbody2D component and set its velocity to be up at the given speed
-            _rb.AddForce(new Vector2(0, 1) * speed);
+            _rb.velocity = new Vector2(_rb.velocity.x, maxSpeed);
         }
 
         if (Input.GetKey(down)) //check for the player HOLDING DOWN the down button
@@ -81,14 +61,7 @@ public class Movement : MonoBehaviour
             
             anim.SetBool("isMoving", true);
             
-
-            if (_rb.velocity.y < -maxSpeed) //sets a limit for speed
-            {
-                _rb.velocity = new Vector2(_rb.velocity.x, -maxSpeed);
-            }
-
-            //get the GameObject's Rigidbody2D component and set its velocity to be down at the given speed
-            _rb.AddForce(new Vector2(0, -1) * speed);
+            _rb.velocity = new Vector2(_rb.velocity.x, -maxSpeed);
         }
         
         if (!Input.GetKey(up) && !Input.GetKey(down) && !Input.GetKey(left) && !Input.GetKey(right))

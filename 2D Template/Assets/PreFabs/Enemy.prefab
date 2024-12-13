@@ -226,7 +226,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0058522224, y: 0.018209934}
+  m_Offset: {x: -0.044104457, y: -0.2210687}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -237,7 +237,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44989157, y: 1.0585222}
+  m_Size: {x: 0.3499782, y: 0.579965}
   m_EdgeRadius: 0
 --- !u!114 &6310121435996640104
 MonoBehaviour:
@@ -405,5 +405,6 @@ MonoBehaviour:
   target: {fileID: 5807890615252592710}
   correctTarget: 0
   undeadToPlayer: {fileID: 0}
+  whereIsPlayer: {fileID: 0}
   closeEnough: 0
   targetTag: GoodGuys
