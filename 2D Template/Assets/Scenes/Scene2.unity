@@ -173,9 +173,10 @@ MonoBehaviour:
   canFire: 1
   timeBetweenFiring: 0.1
   Shoot: 323
-  projectileMaxHeight: 2
+  projectileMaxHeight: 0.5
   distanceToTargetToDestroyProjectile: 0
   maxMoveSpeed: 5
+  destroyTime: 1
   trajectoryAnimationCurve:
     serializedVersion: 2
     m_Curve:

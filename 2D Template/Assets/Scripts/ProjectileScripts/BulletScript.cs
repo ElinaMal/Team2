@@ -6,8 +6,9 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     //[SerializeField] private BulletVisual bulletVisual;
+    [SerializeField] private ProjectileDestroy projectileDestroy;
 
-    private Vector3 mousePos;
+    private Vector3 target;
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
@@ -32,9 +33,9 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         trajectoryStartPoint = transform.position;
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent <Camera>();
+        //mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent <Camera>();
         rb = GetComponent<Rigidbody2D>();
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 direction = mousePos - transform.position;
         //Vector3 rotation = transform.position - mousePos;
         //rb.velocity = new Vector2 (direction.x, direction.y).normalized * force;
@@ -44,7 +45,7 @@ public class BulletScript : MonoBehaviour
 
     private void UpdateProjectilePosition()
     {
-        trajectoryRange = mousePos - trajectoryStartPoint;
+        trajectoryRange = target - trajectoryStartPoint;
 
         //Debug.Log(trajectoryMaxRelativeHeight);
 
@@ -140,15 +141,17 @@ public class BulletScript : MonoBehaviour
         this.speedAnimationCurve = speedAnimationCurve;
     }
 
-    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed)
+    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target)
     {
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        float xDistanceToTarget = mousePos.x - transform.position.x;
+        //mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        //mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        this.target = target;
+        float xDistanceToTarget = target.x - transform.position.x;
         this.trajectoryMaxRelativeHeight = Mathf.Abs(xDistanceToTarget) * trajectoryMaxHeight;
-        Debug.Log(Mathf.Abs(xDistanceToTarget));
+        //Debug.Log(Mathf.Abs(xDistanceToTarget));
         this.distanceToTargetToDestroyProjectile = distanceToTargetToDestroyProjectile;
         this.maxMoveSpeed = maxMoveSpeed;
+        projectileDestroy.InitializeTimer(destroyTime);
 
         //bulletVisual.SetTarget(mousePos);
     }
@@ -162,7 +165,7 @@ public class BulletScript : MonoBehaviour
     void Update()
     {
         UpdateProjectilePosition();
-        if (Vector3.Distance(transform.position, mousePos) < distanceToTargetToDestroyProjectile)
+        if (Vector3.Distance(transform.position, target) < distanceToTargetToDestroyProjectile)
         {
             Destroy(gameObject);
         }
