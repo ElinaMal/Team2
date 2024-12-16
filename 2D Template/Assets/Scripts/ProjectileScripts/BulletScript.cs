@@ -15,6 +15,8 @@ public class BulletScript : MonoBehaviour
     public float maxMoveSpeed;
     private float trajectoryMaxRelativeHeight;
     private float distanceToTargetToDestroyProjectile;
+    private int damage;
+    private string targetTag;
 
     private AnimationCurve trajectoryAnimationCurve;
     private AnimationCurve axisCorrectionAnimationCurve;
@@ -141,7 +143,7 @@ public class BulletScript : MonoBehaviour
         this.speedAnimationCurve = speedAnimationCurve;
     }
 
-    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target)
+    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target, int damage, string targetTag)
     {
         //mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         //mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -151,6 +153,8 @@ public class BulletScript : MonoBehaviour
         //Debug.Log(Mathf.Abs(xDistanceToTarget));
         this.distanceToTargetToDestroyProjectile = distanceToTargetToDestroyProjectile;
         this.maxMoveSpeed = maxMoveSpeed;
+        this.damage = damage;
+        this.targetTag = targetTag;
         projectileDestroy.InitializeTimer(destroyTime);
 
         //bulletVisual.SetTarget(mousePos);
@@ -159,6 +163,15 @@ public class BulletScript : MonoBehaviour
     public Vector3 GetProjectileMoveDir()
     {
         return projectileMoveDir;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.GetComponent<Health>() != null && collider.gameObject.CompareTag(targetTag))
+        {
+            Health health = collider.GetComponent<Health>();
+            health.Damage(damage);
+        }
     }
 
     // Update is called once per frame

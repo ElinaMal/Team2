@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 6637062072155341795}
   - component: {fileID: 2972292303619549318}
   - component: {fileID: 3270620702675442919}
+  - component: {fileID: 5084223092143937689}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -221,6 +222,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f82554b2a67d34e942b295d0a5ab0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
+  targetDetectorObject: {fileID: 1029614407992852302}
+  target: {fileID: 0}
+  anim: {fileID: 5084223092143937689}
+  shootRate: 3
+  shootTimer: 1
+  projectileMaxHeight: 0.5
+  distanceToTargetToDestroyProjectile: 0
+  maxMoveSpeed: 5
+  destroyTime: 10
+  trajectoryAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.000003754627
+      value: -0.00004700804
+      inSlope: 0.32593343
+      outSlope: 0.32593343
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5035137
+      value: 0.16406615
+      inSlope: -0.0015880167
+      outSlope: -0.0015880167
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.002172
+      value: -0.00004700804
+      inSlope: -0.32910946
+      outSlope: -0.32910946
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  axisCorrectionAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!95 &5084223092143937689
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261136040992015367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c050ad8ac3477c408ce1e2338303670, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6363923359956905158
 GameObject:
   m_ObjectHideFlags: 0

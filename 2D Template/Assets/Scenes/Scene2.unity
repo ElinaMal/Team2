@@ -173,10 +173,13 @@ MonoBehaviour:
   canFire: 1
   timeBetweenFiring: 0.1
   Shoot: 323
+  anim: {fileID: 0}
   projectileMaxHeight: 0.5
-  distanceToTargetToDestroyProjectile: 0
+  distanceToTargetToDestroyProjectile: 1
   maxMoveSpeed: 5
   destroyTime: 3
+  damage: 0
+  targetTag: 
   trajectoryAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -407,6 +410,7 @@ GameObject:
   - component: {fileID: 1219207042}
   - component: {fileID: 1219207043}
   - component: {fileID: 1219207044}
+  - component: {fileID: 1219207045}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: GoodGuys
@@ -570,6 +574,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1219207045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219207036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68df4794cfa0ee7439933b934aa57414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 8
+  MAX_HEALTH: 8
+  defense: 0
+  isDead: 0
 --- !u!1 &1436642155
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,14 +951,18 @@ PrefabInstance:
     - target: {fileID: 3270620702675442919, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
+      objectReference: {fileID: 3879945122344325303, guid: dd442101d9392ce46b8d620d83760252, type: 3}
     - target: {fileID: 3270620702675442919, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1219207041}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3270620702675442919, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
-      propertyPath: shootRate
-      value: 3
+      propertyPath: targetTag
+      value: GoodGuys
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620702675442919, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
+      propertyPath: distanceToTargetToDestroyProjectile
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6637062072155341795, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
       propertyPath: m_RootOrder
@@ -983,10 +1007,6 @@ PrefabInstance:
     - target: {fileID: 6637062072155341795, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8137267585617564128, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
-      propertyPath: target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
