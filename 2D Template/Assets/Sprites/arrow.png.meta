@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae290fd5513ffe64692483b1c39d0d3e
+guid: 5e19efaf0dc1c704b9ed6dfab4dc8b13
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu buttons-export_0
+      name: arrow_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 20
-        width: 90
-        height: 22
+        x: 8
+        y: 15
+        width: 15
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,50 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84339e97d12e8684089006cb697abb27
-      internalID: -1689646229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu buttons-export_1
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 20
-        width: 90
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 913733bde5188d04393c7b489168f82b
-      internalID: 1089644869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu buttons-export_2
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 20
-        width: 90
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86cdccf4a605d0f4c90c9d66a1352b13
-      internalID: 1051005172
+      spriteID: 409fae69f86cafe43a034deec4bdc1bb
+      internalID: 188070880
       vertices: []
       indices: 
       edges: []
@@ -204,9 +162,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Menu buttons-export_1: 1089644869
-      Menu buttons-export_0: -1689646229
-      Menu buttons-export_2: 1051005172
+      arrow_0: 188070880
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

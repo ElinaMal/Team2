@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae290fd5513ffe64692483b1c39d0d3e
+guid: 6ff5e3f8b3ff5374b9193f4b3a97541b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu buttons-export_0
+      name: Menu buttons-export (1)_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 20
-        width: 90
-        height: 22
+        x: 0
+        y: 0
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84339e97d12e8684089006cb697abb27
-      internalID: -1689646229
+      spriteID: eeafc140a557b2b4cbf7770dc9162570
+      internalID: 2117677436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu buttons-export_1
+      name: Menu buttons-export (1)_1
       rect:
         serializedVersion: 2
-        x: 147
-        y: 20
-        width: 90
-        height: 22
+        x: 128
+        y: 0
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 913733bde5188d04393c7b489168f82b
-      internalID: 1089644869
+      spriteID: 3b551903ccf67d84b9883357d099a879
+      internalID: -721659975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu buttons-export_2
+      name: Menu buttons-export (1)_2
       rect:
         serializedVersion: 2
-        x: 275
-        y: 20
-        width: 90
-        height: 22
+        x: 256
+        y: 0
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86cdccf4a605d0f4c90c9d66a1352b13
-      internalID: 1051005172
+      spriteID: c7ca8f59056c61e4fbabeb2ae48a5343
+      internalID: -749376903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu buttons-export (1)_3
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 15
+        width: 91
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cae823506241e647862e9740c48e738
+      internalID: -652397155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu buttons-export (1)_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14703c90c6122e3428ba1a629be732ee
+      internalID: 1890349658
       vertices: []
       indices: 
       edges: []
@@ -204,9 +246,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Menu buttons-export_1: 1089644869
-      Menu buttons-export_0: -1689646229
-      Menu buttons-export_2: 1051005172
+      Menu buttons-export (1)_2: -749376903
+      Menu buttons-export (1)_1: -721659975
+      Menu buttons-export (1)_3: -652397155
+      Menu buttons-export (1)_4: 1890349658
+      Menu buttons-export (1)_0: 2117677436
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
