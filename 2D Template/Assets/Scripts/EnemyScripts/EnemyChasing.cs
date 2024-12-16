@@ -43,7 +43,7 @@ public class EnemyChasing : MonoBehaviour
                     undeadChasePlayer.enabled = true;
                 }
             }
-            else
+            else if (gameObject.CompareTag("BadGuys")) 
             {
                 transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
                 targetDirection = EnemyDetection.directionToPlayer;
