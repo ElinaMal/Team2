@@ -7,6 +7,8 @@ public class EnemyChasing : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     public EnemyDetection EnemyDetection;
+    public UndeadToPlayer undeadToPlayer;
+    public UndeadChasePlayer undeadChasePlayer;
     private Vector2 targetDirection;
     private bool facingLeft;
 
@@ -33,6 +35,12 @@ public class EnemyChasing : MonoBehaviour
                 {
                     transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
                     targetDirection = EnemyDetection.directionToPlayer;
+
+                    undeadChasePlayer.enabled = false;
+                }
+                else
+                {
+                    undeadChasePlayer.enabled = true;
                 }
             }
             else

@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 4981938966152942870}
   - component: {fileID: 4263997726465463705}
   - component: {fileID: 9035361353265565374}
+  - component: {fileID: 3844384562399825714}
   m_Layer: 0
   m_Name: Undead
   m_TagString: GoodGuys
@@ -263,6 +264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 10
   EnemyDetection: {fileID: 2427674873133561702}
+  undeadToPlayer: {fileID: 4250807251980037007}
+  undeadChasePlayer: {fileID: 9035361353265565374}
 --- !u!61 &4263997726465463705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,7 +279,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.053525954, y: -0.26179522}
+  m_Offset: {x: 0.053525954, y: -0.21422055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -287,7 +290,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37498504, y: 0.52238286}
+  m_Size: {x: 0.37498504, y: 0.6175322}
   m_EdgeRadius: 0
 --- !u!114 &9035361353265565374
 MonoBehaviour:
@@ -303,6 +306,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 15
   undeadToPlayer: {fileID: 4250807251980037007}
+  EnemyDetection: {fileID: 2427674873133561702}
+--- !u!114 &3844384562399825714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520239519232593964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68df4794cfa0ee7439933b934aa57414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  MAX_HEALTH: 100
+  defense: 1
+  isDead: 0
 --- !u!1 &8166152784406419047
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,5 +440,6 @@ MonoBehaviour:
   detected: 0
   directionToPlayer: {x: 0, y: 0}
   target: {fileID: 5078307215131975666}
+  player: {fileID: 3405704392289787855}
   correctTarget: 0
   detectedObjects: []

@@ -6,6 +6,7 @@ public class UndeadToPlayer : MonoBehaviour
     public bool detected = false;
     public Vector2 directionToPlayer;
     public Transform target;
+    public WhereIsPlayer player;
     public bool correctTarget = false;
     public List<string> detectedObjects;
 

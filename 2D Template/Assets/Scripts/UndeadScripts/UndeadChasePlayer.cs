@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 public class UndeadChasePlayer : MonoBehaviour
 {
@@ -6,6 +6,7 @@ public class UndeadChasePlayer : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     public UndeadToPlayer undeadToPlayer;
+    public EnemyDetection EnemyDetection;
     private Vector2 targetDirection;
     private bool facingLeft;
 
@@ -38,18 +39,19 @@ public class UndeadChasePlayer : MonoBehaviour
 
     private void Rotation()
     {
-        /*
-        if (targetDirection.x > 0 && facingLeft == true)
-        {
-            facingLeft = false;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+        if (undeadToPlayer.enabled)
+        {  
+            if (targetDirection.x > 0 && facingLeft == true)
+            {
+                facingLeft = false;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (targetDirection.x < 0 && facingLeft == false)
+            {
+                facingLeft = true;
+                transform.rotation = Quaternion.Euler(0, -180, 0);
+            }
         }
-        else if (targetDirection.x < 0 && facingLeft == false)
-        {
-            facingLeft = true;
-            transform.rotation = Quaternion.Euler(0, -180, 0);
-        }
-        */
     }
 
     private void MovementControl()

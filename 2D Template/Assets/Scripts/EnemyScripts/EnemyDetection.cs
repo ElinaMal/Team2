@@ -55,7 +55,7 @@ public class EnemyDetection : MonoBehaviour
 
         if (gameObject.CompareTag("GoodGuysZone"))
         {
-            if (whereIsPlayer.distance < 20)
+            if (whereIsPlayer.distance < 16)
             {
                 closeEnough = true;
             }
