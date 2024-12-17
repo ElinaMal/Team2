@@ -11,6 +11,7 @@ public class EnemyChasing : MonoBehaviour
     public UndeadChasePlayer undeadChasePlayer;
     private Vector2 targetDirection;
     private bool facingLeft;
+    [SerializeField] private Animator anim;
 
     private void Awake()
     {
@@ -33,6 +34,8 @@ public class EnemyChasing : MonoBehaviour
             {
                 if (EnemyDetection.closeEnough)
                 {
+                    anim.SetBool("isWalking", true);
+
                     transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
                     targetDirection = EnemyDetection.directionToPlayer;
 
@@ -40,17 +43,23 @@ public class EnemyChasing : MonoBehaviour
                 }
                 else
                 {
+                    anim.SetBool("isWalking", false);
+
                     undeadChasePlayer.enabled = true;
                 }
             }
             else if (gameObject.CompareTag("BadGuys")) 
             {
+                anim.SetBool("isWalking", true);
+
                 transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
                 targetDirection = EnemyDetection.directionToPlayer;
             }
         }
         else
         {
+            anim.SetBool("isWalking", false);
+
             targetDirection = Vector2.zero;
         }
     }
