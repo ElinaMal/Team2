@@ -9,9 +9,9 @@ public class Health : MonoBehaviour
     [SerializeField] public int defense = 1;
 
 
-    /*
+    
     public Animator anim;
-    */
+    
 
     public bool isDead = false;
 
@@ -72,22 +72,18 @@ public class Health : MonoBehaviour
     {
         Debug.Log("I am Dead!");
 
-        /*
-        anim.ResetTrigger("isHurt");
+        //anim.ResetTrigger("isHurt");
         anim.SetBool("isDying", true);
-        */
 
         isDead = true;
 
         if (GetComponent<EnemyMovement>() != null)
         {
             GetComponent<EnemyMovement>().enabled = false;
-            Destroy(gameObject);
         }
         if (GetComponent<Movement>() != null)
         {
             GetComponent<Movement>().enabled = false;
-            Destroy(gameObject);
         }
     }
 

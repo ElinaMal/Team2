@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 2972292303619549318}
   - component: {fileID: 3270620702675442919}
   - component: {fileID: 5084223092143937689}
+  - component: {fileID: 8940326175842358441}
+  - component: {fileID: 521889598717203751}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -156,7 +158,7 @@ Transform:
   - {fileID: 7348322013524899468}
   - {fileID: 824761742133797616}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2972292303619549318
 SpriteRenderer:
@@ -222,16 +224,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f82554b2a67d34e942b295d0a5ab0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
+  bullet: {fileID: 3879945122344325303, guid: dd442101d9392ce46b8d620d83760252, type: 3}
   targetDetectorObject: {fileID: 1029614407992852302}
   target: {fileID: 0}
   anim: {fileID: 5084223092143937689}
   shootRate: 3
   shootTimer: 1
   projectileMaxHeight: 0.5
-  distanceToTargetToDestroyProjectile: 0
+  distanceToTargetToDestroyProjectile: 0.1
   maxMoveSpeed: 5
   destroyTime: 10
+  damage: 1
+  targetTag: GoodGuys
   trajectoryAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -333,6 +337,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8940326175842358441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261136040992015367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68df4794cfa0ee7439933b934aa57414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  MAX_HEALTH: 2
+  defense: 0
+  isDead: 0
+--- !u!70 &521889598717203751
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261136040992015367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.3489645}
+  m_Size: {x: 0.51689434, y: 1.2810332}
+  m_Direction: 0
 --- !u!1 &6363923359956905158
 GameObject:
   m_ObjectHideFlags: 0
