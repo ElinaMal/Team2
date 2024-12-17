@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3380077681910567183}
   - component: {fileID: -4695595106899801062}
   - component: {fileID: 4638576874274822195}
+  - component: {fileID: 2282293054146853927}
   m_Layer: 0
-  m_Name: Arrow
+  m_Name: HolyWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3879945122344325303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7674715, y: 1.0443566, z: 0.09350422}
-  m_LocalScale: {x: 2, y: 2, z: 6.666667}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 188070880, guid: 5e19efaf0dc1c704b9ed6dfab4dc8b13, type: 3}
+  m_Sprite: {fileID: 2135094057, guid: 1b4c5c2cfbb0bf0479a74dd100622a5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,6 +166,26 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0015567243, y: 0.0020752046}
-  m_Size: {x: 0.49871728, y: 0.10608364}
+  m_Offset: {x: -0.027880147, y: 0.027880408}
+  m_Size: {x: 0.25756207, y: 0.25756207}
   m_Direction: 1
+--- !u!95 &2282293054146853927
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879945122344325303}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6640cda519645342a0d35ccbe6245d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
