@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GoodGuys
   - BadGuys
+  - BadGuysZone
+  - GoodGuysZone
   layers:
   - Default
   - TransparentFX
@@ -46,12 +48,6 @@ TagManager:
   - name: Ground
     uniqueID: 3626632817
     locked: 0
-  - name: Enemy
+  - name: Objects
     uniqueID: 3587422089
-    locked: 0
-  - name: Undead
-    uniqueID: 3424324917
-    locked: 0
-  - name: Player
-    uniqueID: 467742401
     locked: 0
