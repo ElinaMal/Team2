@@ -267,6 +267,7 @@ MonoBehaviour:
   EnemyDetection: {fileID: 2427674873133561702}
   undeadToPlayer: {fileID: 4250807251980037007}
   undeadChasePlayer: {fileID: 9035361353265565374}
+  anim: {fileID: 6428650313319347633}
 --- !u!61 &4263997726465463705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -306,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 15
+  anim: {fileID: 6428650313319347633}
   undeadToPlayer: {fileID: 4250807251980037007}
   EnemyDetection: {fileID: 2427674873133561702}
 --- !u!114 &3844384562399825714

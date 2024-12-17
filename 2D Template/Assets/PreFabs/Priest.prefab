@@ -154,6 +154,7 @@ MonoBehaviour:
   health: 10
   MAX_HEALTH: 10
   defense: 1
+  anim: {fileID: 3419327845009339725}
   isDead: 0
 --- !u!114 &3736332685495959682
 MonoBehaviour:
@@ -171,6 +172,7 @@ MonoBehaviour:
   EnemyDetection: {fileID: 2831883583558987273}
   undeadToPlayer: {fileID: 0}
   undeadChasePlayer: {fileID: 0}
+  anim: {fileID: 3419327845009339725}
 --- !u!114 &346921431440084572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyVelocity: 2
+  anim: {fileID: 3419327845009339725}
   changeTimeMin: 5
   changeTimeMax: 10
   waitTime: 2.6

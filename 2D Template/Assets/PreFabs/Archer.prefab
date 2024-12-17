@@ -352,6 +352,7 @@ MonoBehaviour:
   health: 2
   MAX_HEALTH: 2
   defense: 0
+  anim: {fileID: 5084223092143937689}
   isDead: 0
 --- !u!70 &521889598717203751
 CapsuleCollider2D:
