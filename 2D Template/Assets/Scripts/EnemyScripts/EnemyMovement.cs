@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector2 movementDirection;
     private Vector2 movement;
 
+    [SerializeField] private Animator anim;
     [SerializeField] private float changeTimeMin;
     [SerializeField] private float changeTimeMax;
     [SerializeField] private float waitTime;
@@ -38,10 +39,19 @@ public class EnemyMovement : MonoBehaviour
             FindMovement();
         }
 
+        if (movement.x != 0 || movement.y != 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+
         if (wait == false)
         {
             _rb.velocity = new Vector2(movement.x, movement.y);
-
+            
             if (movement.x > 0 && FacingLeft == true)
             {
                 FacingLeft = false;
@@ -64,6 +74,7 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator StandingStill()
     {
         wait = true;
+        anim.SetBool("isWalking", false);
         _rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(waitTime);
         wait = false;
