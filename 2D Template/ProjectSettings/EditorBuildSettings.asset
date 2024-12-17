@@ -6,14 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/Scene1.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+=======
     path: Assets/Scenes/MainMenu.unity
     guid: 20b5b1073b123ec4b939b22702fd2b9f
+>>>>>>> b30dec5585a8e8069de4f5ee9272ab411ac48b8b
   - enabled: 1
     path: Assets/Scenes/Don't mind this!!.unity
     guid: b7ff726c04ca01542bc4bc3625d088c2
   - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/MainMenu.unity
+    guid: 20b5b1073b123ec4b939b22702fd2b9f
+=======
     path: Assets/Scenes/Scene1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+>>>>>>> b30dec5585a8e8069de4f5ee9272ab411ac48b8b
   - enabled: 1
     path: Assets/Scenes/Scene2.unity
     guid: 9be25ee97128c9d48bf220120e501e09
