@@ -178,8 +178,8 @@ MonoBehaviour:
   distanceToTargetToDestroyProjectile: 1
   maxMoveSpeed: 5
   destroyTime: 3
-  damage: 0
-  targetTag: 
+  damage: 1
+  targetTag: BadGuys
   trajectoryAnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  targetTag: 
 --- !u!212 &1057658362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -413,7 +414,7 @@ GameObject:
   - component: {fileID: 1219207045}
   m_Layer: 0
   m_Name: PlayerObject
-  m_TagString: GoodGuys
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +435,7 @@ MonoBehaviour:
   right: 100
   up: 119
   down: 115
-  maxSpeed: 8
+  maxSpeed: 20
   anim: {fileID: 1219207044}
 --- !u!50 &1219207038
 Rigidbody2D:
@@ -524,7 +525,7 @@ Transform:
   - {fileID: 1057658359}
   - {fileID: 181245226}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1219207042
 MonoBehaviour:
@@ -589,6 +590,7 @@ MonoBehaviour:
   health: 8
   MAX_HEALTH: 8
   defense: 0
+  anim: {fileID: 0}
   isDead: 0
 --- !u!1 &1436642155
 GameObject:
@@ -808,6 +810,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1694327313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2520239519232593964, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_Name
+      value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.44003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6344876
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078307215131975666, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
 --- !u!1 &1956534600
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +953,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27.485}
 --- !u!114 &1956534603
 MonoBehaviour:
@@ -909,6 +970,7 @@ MonoBehaviour:
   health: 8
   MAX_HEALTH: 8
   defense: 4
+  anim: {fileID: 0}
   isDead: 0
 --- !u!61 &1956534604
 BoxCollider2D:
@@ -948,6 +1010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 1261136040992015367, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
+      propertyPath: m_TagString
+      value: BadGuys
+      objectReference: {fileID: 0}
     - target: {fileID: 3270620702675442919, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
       propertyPath: bullet
       value: 
@@ -966,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6637062072155341795, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6637062072155341795, guid: c61f09b10193c66419b7bd7676de6cad, type: 3}
       propertyPath: m_LocalPosition.x

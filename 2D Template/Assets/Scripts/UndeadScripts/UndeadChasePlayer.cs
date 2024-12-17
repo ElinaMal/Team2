@@ -3,6 +3,7 @@
 public class UndeadChasePlayer : MonoBehaviour
 {
     [SerializeField] private float velocity;
+    [SerializeField] private Animator anim;
 
     private Rigidbody2D rigidBody;
     public UndeadToPlayer undeadToPlayer;
@@ -27,11 +28,13 @@ public class UndeadChasePlayer : MonoBehaviour
     {
         if (undeadToPlayer.detected && undeadToPlayer.correctTarget)
         {
+            anim.SetBool("isWalking", false);
             targetDirection = Vector2.zero;
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
         else
         {
+            anim.SetBool("isWalking", true);
             transform.position = Vector2.MoveTowards(transform.position, undeadToPlayer.target.position, Time.deltaTime * velocity);
             targetDirection = undeadToPlayer.directionToPlayer;
         }

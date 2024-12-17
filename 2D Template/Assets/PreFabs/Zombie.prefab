@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -870642379
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 4263997726465463705}
   - component: {fileID: 9035361353265565374}
   - component: {fileID: 3844384562399825714}
+  - component: {fileID: 6428650313319347633}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: GoodGuys
@@ -215,11 +216,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -870642379
-  m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingLayerID: -707545207
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1094143985, guid: ba4d4c3599b9d40458cac5c8c52a8937, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -266,6 +267,7 @@ MonoBehaviour:
   EnemyDetection: {fileID: 2427674873133561702}
   undeadToPlayer: {fileID: 4250807251980037007}
   undeadChasePlayer: {fileID: 9035361353265565374}
+  anim: {fileID: 6428650313319347633}
 --- !u!61 &4263997726465463705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -279,7 +281,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.053525954, y: -0.21422055}
+  m_Offset: {x: 0.053525954, y: -0.16992706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -290,7 +292,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37498504, y: 0.6175322}
+  m_Size: {x: 0.37498504, y: 0.52894515}
   m_EdgeRadius: 0
 --- !u!114 &9035361353265565374
 MonoBehaviour:
@@ -305,6 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 15
+  anim: {fileID: 6428650313319347633}
   undeadToPlayer: {fileID: 4250807251980037007}
   EnemyDetection: {fileID: 2427674873133561702}
 --- !u!114 &3844384562399825714
@@ -319,10 +322,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68df4794cfa0ee7439933b934aa57414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  MAX_HEALTH: 100
-  defense: 1
+  health: 2
+  MAX_HEALTH: 2
+  defense: 0
+  anim: {fileID: 6428650313319347633}
   isDead: 0
+--- !u!95 &6428650313319347633
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520239519232593964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b2b74099f417a7a4eb5cd52ef9b343d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8166152784406419047
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +420,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -870642379
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
