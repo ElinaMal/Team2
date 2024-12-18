@@ -45,7 +45,7 @@ public class NPCRangedAttack : MonoBehaviour
     private void Shoot()
     {
         EnemyDetection targetDetector = targetDetectorObject.GetComponent<EnemyDetection>();
-        if (shootTimer <= 0 && targetDetector.detected)
+        if (shootTimer <= 0 && targetDetector.correctTarget)
         {
             anim.SetTrigger("Shooting");
             shootTimer = shootRate;
