@@ -15,7 +15,7 @@ public class BulletScript : MonoBehaviour
     public float maxMoveSpeed;
     private float trajectoryMaxRelativeHeight;
     private float distanceToTargetToDestroyProjectile;
-    private int damage;
+    private float damage;
     private string targetTag;
 
     private AnimationCurve trajectoryAnimationCurve;
@@ -30,6 +30,13 @@ public class BulletScript : MonoBehaviour
     private float nextXTrajectoryPosition;
     private float nextPositionYCorrection;
     private float nextPositionXCorrection;
+
+    private bool Pierce;
+    private bool Slash;
+    private bool Blunt;
+    private bool AN;
+    private bool Burn;
+    private int burnAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -143,7 +150,7 @@ public class BulletScript : MonoBehaviour
         this.speedAnimationCurve = speedAnimationCurve;
     }
 
-    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target, int damage, string targetTag)
+    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target, float damage, string targetTag, bool Pierce, bool Slash, bool Blunt, bool AN, bool Burn, int burnAmount)
     {
         //mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         //mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -156,6 +163,12 @@ public class BulletScript : MonoBehaviour
         this.damage = damage;
         this.targetTag = targetTag;
         projectileDestroy.InitializeTimer(destroyTime);
+        this.Pierce = Pierce;
+        this.Slash = Slash;
+        this.Blunt = Blunt;
+        this.AN = AN;
+        this.Burn = Burn;
+        this.burnAmount = burnAmount;
 
         //bulletVisual.SetTarget(mousePos);
     }
@@ -170,7 +183,7 @@ public class BulletScript : MonoBehaviour
         if (collider.GetComponent<Health>() != null && collider.gameObject.CompareTag(targetTag))
         {
             Health health = collider.GetComponent<Health>();
-            health.Damage(damage);
+            health.Damage(damage, Pierce, Slash, Blunt, AN, Burn, burnAmount);
             Destroy(gameObject);
         }
     }
