@@ -76,10 +76,23 @@ public class Health : MonoBehaviour
         anim.SetBool("isDying", true);
 
         isDead = true;
+        gameObject.tag = "Dead";
 
         if (GetComponent<EnemyMovement>() != null)
         {
             GetComponent<EnemyMovement>().enabled = false;
+        }
+        if (GetComponent<UndeadChasePlayer>() != null)
+        {
+            GetComponent<UndeadChasePlayer>().enabled = false;
+        }
+        if (GetComponent<EnemyChasing>() != null)
+        {
+            GetComponent<EnemyChasing>().enabled = false;
+        }
+        if (GetComponent<NPCRangedAttack>() != null)
+        {
+            GetComponent<NPCRangedAttack>().enabled = false;
         }
         if (GetComponent<Movement>() != null)
         {
