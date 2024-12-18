@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5959522753039079469}
   - component: {fileID: 5452805506781103833}
   m_Layer: 0
-  m_Name: UndeadWizard
+  m_Name: DeadWizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
