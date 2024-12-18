@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public int health = 100;
+    [SerializeField] public float health = 100;
 
-    [SerializeField] private int MAX_HEALTH = 100;
+    [SerializeField] private float MAX_HEALTH = 100;
 
     [SerializeField] public int defense = 1;
+
+    [SerializeField] public bool pierceRes = false;
+    [SerializeField] public bool slashRes = false;
+    [SerializeField] public bool bluntRes = false;
+    [SerializeField] public bool burnRes = false;
+    public bool isBurning = false;
+
+    private float finalDamage;
 
 
     
@@ -21,7 +29,7 @@ public class Health : MonoBehaviour
         
     }
 
-    public void Damage(int amount)
+    public void Damage(float amount, bool Pierce, bool Slash, bool Blunt, bool AN, bool Burn, int burnAmount)
     {
         /*
         anim.SetTrigger("isHurt");
@@ -32,12 +40,40 @@ public class Health : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("Cannot Have Negative Damage");
         }
 
-        if (amount - defense <= 0)
+        if (slashRes && Slash)
+        {
+            finalDamage = amount / 2;
+        }
+
+        if (pierceRes && Pierce)
+        {
+            finalDamage = amount / 2;
+        }
+
+        if (bluntRes && Blunt)
+        {
+            finalDamage = amount / 2;
+        }
+
+        if (AN == false)
+        {
+            this.health -= finalDamage - defense;
+        }
+
+        if (AN == true)
+        {
+            this.health -= finalDamage;
+        }
+
+        if (finalDamage - defense <= 0)
         {
             throw new System.ArgumentOutOfRangeException("Armor fully negated damage");
         }
 
-        this.health -= amount - defense;
+        if (Burn && burnRes == false)
+        {
+            Burning(burnAmount);
+        }
 
         //if (GetComponent<Hearts>() != null)
         //{
@@ -45,9 +81,18 @@ public class Health : MonoBehaviour
         //    hearts.Damage(1);
         //}
 
-        if(health <= 0 && isDead == false)
+        if (health <= 0 && isDead == false)
         {
             Die();
+        }
+    }
+
+    public void Burning(int burnAmount)
+    {
+        Debug.Log("I am on fire!");
+        for (int i = 0; i < burnAmount; i++)
+        {
+            Damage(1, false, false, false, true, false, 0);
         }
     }
 

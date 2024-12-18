@@ -179,6 +179,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7827299594931818999, guid: 6763ffe2fec79a74faa03e999571da4f, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827299594931818999, guid: 6763ffe2fec79a74faa03e999571da4f, type: 3}
+      propertyPath: burnAmount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6763ffe2fec79a74faa03e999571da4f, type: 3}
@@ -329,6 +337,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  Pierce: 0
+  Slash: 0
+  Blunt: 0
+  AN: 0
+  Burn: 0
+  burnAmount: 0
 --- !u!1001 &217124454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -698,6 +712,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   targetTag: 
+  Pierce: 0
+  Slash: 0
+  Blunt: 0
+  AN: 0
+  Burn: 0
+  burnAmount: 0
 --- !u!212 &1057658362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -944,6 +964,11 @@ MonoBehaviour:
   health: 8
   MAX_HEALTH: 8
   defense: 0
+  pierceRes: 0
+  slashRes: 0
+  bluntRes: 0
+  burnRes: 0
+  isBurning: 0
   anim: {fileID: 0}
   isDead: 0
 --- !u!1 &1436642155
@@ -1383,6 +1408,11 @@ MonoBehaviour:
   health: 8
   MAX_HEALTH: 8
   defense: 4
+  pierceRes: 0
+  slashRes: 0
+  bluntRes: 0
+  burnRes: 0
+  isBurning: 0
   anim: {fileID: 0}
   isDead: 0
 --- !u!61 &1956534604

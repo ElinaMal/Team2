@@ -17,12 +17,19 @@ public class NPCRangedAttack : MonoBehaviour
     [SerializeField] private float distanceToTargetToDestroyProjectile;
     [SerializeField] private float maxMoveSpeed;
     [SerializeField] private float destroyTime;
-    [SerializeField] private int damage;
+    [SerializeField] private float damage;
     [SerializeField] private string targetTag;
 
     [SerializeField] private AnimationCurve trajectoryAnimationCurve;
     [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
     [SerializeField] private AnimationCurve speedAnimationCurve;
+
+    [SerializeField] private bool Pierce;
+    [SerializeField] private bool Slash;
+    [SerializeField] private bool Blunt;
+    [SerializeField] private bool AN;
+    [SerializeField] private bool Burn;
+    [SerializeField] private int burnAmount;
 
     private void Start()
     {
@@ -51,7 +58,7 @@ public class NPCRangedAttack : MonoBehaviour
             shootTimer = shootRate;
             BulletScript bulletScript = Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<BulletScript>();
             bulletScript.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, speedAnimationCurve);
-            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed, destroyTime, target.position, damage, targetTag);
+            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed, destroyTime, target.position, damage, targetTag, Pierce, Slash, Blunt, AN, Burn, burnAmount);
 
         }
 
