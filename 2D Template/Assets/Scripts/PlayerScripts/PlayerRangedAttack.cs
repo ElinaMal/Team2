@@ -30,6 +30,7 @@ public class PlayerRangedAttack : MonoBehaviour
     [SerializeField] private bool AN;
     [SerializeField] private bool Burn;
     [SerializeField] private int burnAmount;
+    [SerializeField] private float burnDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +64,7 @@ public class PlayerRangedAttack : MonoBehaviour
             canFire = false;
             BulletScript bulletScript = Instantiate(bullet, bulletTransform.position, Quaternion.identity).GetComponent<BulletScript>();
             bulletScript.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, speedAnimationCurve);
-            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed, destroyTime, mousePos, damage, targetTag, Pierce, Slash, Blunt, AN, Burn, burnAmount);
+            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed, destroyTime, mousePos, damage, targetTag, Pierce, Slash, Blunt, AN, Burn, burnAmount, burnDamage);
         }
     }
 }
