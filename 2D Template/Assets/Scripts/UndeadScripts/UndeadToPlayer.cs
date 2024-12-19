@@ -19,29 +19,36 @@ public class UndeadToPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         detectedObjects.Add(collision.gameObject.name);
+
+        if (detectedObjects.Contains("Player"))
+        {
+            correctTarget = true;
+        }
+        else
+        {
+            correctTarget = false;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collider)
     {
         detected = true;
 
-        if (detected) 
-        {
-            if (detectedObjects.Contains("Player"))
-            {
-                correctTarget = true;
-            }
-            else
-            {
-                correctTarget = false;
-            }
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         detected = false;
         detectedObjects.Remove(collision.gameObject.name);
+
+        if (detectedObjects.Contains("Player"))
+        {
+            correctTarget = true;
+        }
+        else
+        {
+            correctTarget = false;
+        }
     }
 
     // Update is called once per frame
