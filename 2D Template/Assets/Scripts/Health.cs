@@ -40,6 +40,8 @@ public class Health : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("Cannot Have Negative Damage");
         }
 
+        finalDamage = amount;
+
         if (slashRes && Slash)
         {
             finalDamage = amount / 2;
@@ -55,7 +57,9 @@ public class Health : MonoBehaviour
             finalDamage = amount / 2;
         }
 
-        if (AN == false)
+        Debug.Log(finalDamage);
+
+        if (AN == false && finalDamage - defense !< 0)
         {
             this.health -= finalDamage - defense;
         }
@@ -67,7 +71,7 @@ public class Health : MonoBehaviour
 
         if (finalDamage - defense <= 0)
         {
-            throw new System.ArgumentOutOfRangeException("Armor fully negated damage");
+            Debug.Log("Armor fully negated damage");
         }
 
         if (Burn && burnRes == false)
