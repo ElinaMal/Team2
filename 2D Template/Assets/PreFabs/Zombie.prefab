@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2996841274577267552}
   - component: {fileID: 2427674873133561702}
   - component: {fileID: 3405704392289787855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyDetectZone
   m_TagString: GoodGuysZone
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 9035361353265565374}
   - component: {fileID: 3844384562399825714}
   - component: {fileID: 6428650313319347633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Zombie
   m_TagString: GoodGuys
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 8524348209802223240}
   - component: {fileID: 8245334860529736173}
   - component: {fileID: 4250807251980037007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerArea
   m_TagString: GoodGuysZone
   m_Icon: {fileID: 0}

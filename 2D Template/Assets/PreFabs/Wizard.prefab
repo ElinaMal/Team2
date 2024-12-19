@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1395960081025395406}
   - component: {fileID: 2037347037980387151}
   - component: {fileID: 888356800428544629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerDetection
   m_TagString: BadGuysZone
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 1203683106939412433}
   - component: {fileID: 5056267584471166752}
   - component: {fileID: 4342438232145679598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wizard
   m_TagString: BadGuys
   m_Icon: {fileID: 0}
@@ -275,6 +275,13 @@ MonoBehaviour:
   health: 2
   MAX_HEALTH: 2
   defense: 0
+  pierceRes: 0
+  slashRes: 0
+  bluntRes: 0
+  burnRes: 0
+  burnTicks: 0
+  burnDelta: 0
+  burnDamage: 0
   anim: {fileID: 4342438232145679598}
   isDead: 0
 --- !u!114 &1203683106939412433
