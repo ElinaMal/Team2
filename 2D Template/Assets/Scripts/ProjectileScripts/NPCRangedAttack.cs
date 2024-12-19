@@ -30,6 +30,7 @@ public class NPCRangedAttack : MonoBehaviour
     [SerializeField] private bool AN;
     [SerializeField] private bool Burn;
     [SerializeField] private int burnAmount;
+    [SerializeField] private float burnDamage;
 
     private void Start()
     {
@@ -58,7 +59,7 @@ public class NPCRangedAttack : MonoBehaviour
             shootTimer = shootRate;
             BulletScript bulletScript = Instantiate(bullet, transform.position, Quaternion.identity).GetComponent<BulletScript>();
             bulletScript.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, speedAnimationCurve);
-            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed, destroyTime, target.position, damage, targetTag, Pierce, Slash, Blunt, AN, Burn, burnAmount);
+            bulletScript.InitializeProjectile(projectileMaxHeight, distanceToTargetToDestroyProjectile, maxMoveSpeed, destroyTime, target.position, damage, targetTag, Pierce, Slash, Blunt, AN, Burn, burnAmount, burnDamage);
 
         }
 

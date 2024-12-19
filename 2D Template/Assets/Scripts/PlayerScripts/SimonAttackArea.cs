@@ -12,13 +12,14 @@ public class SimonAttackArea : MonoBehaviour
     [SerializeField] private bool AN;
     [SerializeField] private bool Burn;
     [SerializeField] private int burnAmount;
+    [SerializeField] private int burnDamage;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.GetComponent<Health>() != null && collider.gameObject.CompareTag(targetTag))
         {
             Health health = collider.GetComponent<Health>();
-            health.Damage(damage, Pierce, Slash, Blunt, AN, Burn, burnAmount);
+            health.Damage(damage, Pierce, Slash, Blunt, AN, Burn, burnAmount, burnDamage);
         }
     }
 }

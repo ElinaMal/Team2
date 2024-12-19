@@ -20,7 +20,6 @@ public class UndeadChasePlayer : MonoBehaviour
     void Update()
     {
         UpdateTargetDirection();
-        MovementControl();
         Rotation();
     }
 
@@ -55,9 +54,5 @@ public class UndeadChasePlayer : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0, -180, 0);
             }
         }
-    }
-
-    private void MovementControl()
-    {
     }
 }

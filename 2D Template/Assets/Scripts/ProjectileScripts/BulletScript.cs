@@ -37,6 +37,7 @@ public class BulletScript : MonoBehaviour
     private bool AN;
     private bool Burn;
     private int burnAmount;
+    private float burnDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -150,7 +151,7 @@ public class BulletScript : MonoBehaviour
         this.speedAnimationCurve = speedAnimationCurve;
     }
 
-    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target, float damage, string targetTag, bool Pierce, bool Slash, bool Blunt, bool AN, bool Burn, int burnAmount)
+    public void InitializeProjectile(float trajectoryMaxHeight, float distanceToTargetToDestroyProjectile, float maxMoveSpeed, float destroyTime, Vector3 target, float damage, string targetTag, bool Pierce, bool Slash, bool Blunt, bool AN, bool Burn, int burnAmount, float burnDamage)
     {
         //mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         //mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -169,6 +170,7 @@ public class BulletScript : MonoBehaviour
         this.AN = AN;
         this.Burn = Burn;
         this.burnAmount = burnAmount;
+        this.burnDamage = burnDamage;
 
         //bulletVisual.SetTarget(mousePos);
     }
@@ -183,7 +185,7 @@ public class BulletScript : MonoBehaviour
         if (collider.GetComponent<Health>() != null && collider.gameObject.CompareTag(targetTag))
         {
             Health health = collider.GetComponent<Health>();
-            health.Damage(damage, Pierce, Slash, Blunt, AN, Burn, burnAmount);
+            health.Damage(damage, Pierce, Slash, Blunt, AN, Burn, burnAmount, burnDamage);
             Destroy(gameObject);
         }
     }

@@ -12,7 +12,11 @@ public class Health : MonoBehaviour
     [SerializeField] public bool slashRes = false;
     [SerializeField] public bool bluntRes = false;
     [SerializeField] public bool burnRes = false;
-    public bool isBurning = false;
+    //public bool isBurning = false;
+
+    public int burnTicks = 0;
+    public float burnDelta = 0;
+    public float burnDamage = 0;
 
     private float finalDamage;
 
@@ -26,10 +30,18 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        burnDelta -= Time.deltaTime;
+
+        if (burnTicks > 0 && burnDelta <= 0)
+        {
+            burnDelta = 1;
+            burnTicks -= 1;
+            Damage(burnDamage, AN: true);
+        }
     }
 
-    public void Damage(float amount, bool Pierce, bool Slash, bool Blunt, bool AN, bool Burn, int burnAmount)
+    public void Damage(float amount, bool Pierce = false, bool Slash = false, bool Blunt = false, bool AN = false, bool Burn = false, int burnAmount = 0, float burnDamage = 0)
     {
         /*
         anim.SetTrigger("isHurt");
@@ -59,9 +71,12 @@ public class Health : MonoBehaviour
 
         Debug.Log(finalDamage);
 
-        if (AN == false && finalDamage - defense !< 0)
+        if (AN == false)
         {
-            this.health -= finalDamage - defense;
+            if (finalDamage - defense > 0)
+            {
+                this.health -= finalDamage - defense;
+            }
         }
 
         if (AN == true)
@@ -76,7 +91,9 @@ public class Health : MonoBehaviour
 
         if (Burn && burnRes == false)
         {
-            Burning(burnAmount);
+            burnTicks += burnAmount;
+            burnDelta = 1;
+            this.burnDamage = burnDamage;
         }
 
         //if (GetComponent<Hearts>() != null)
@@ -96,7 +113,7 @@ public class Health : MonoBehaviour
         Debug.Log("I am on fire!");
         for (int i = 0; i < burnAmount; i++)
         {
-            Damage(1, false, false, false, true, false, 0);
+            Damage(1, AN: true);
         }
     }
 
@@ -146,6 +163,14 @@ public class Health : MonoBehaviour
         if (GetComponent<Movement>() != null)
         {
             GetComponent<Movement>().enabled = false;
+        }
+        if (GetComponent<BoxCollider2D>() != null)
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+        if (GetComponent<CapsuleCollider2D>() != null)
+        {
+            GetComponent<CapsuleCollider2D>().enabled = false;
         }
     }
 
