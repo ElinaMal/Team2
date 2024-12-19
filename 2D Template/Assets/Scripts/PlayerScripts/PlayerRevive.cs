@@ -7,12 +7,15 @@ public class PlayerRevive : MonoBehaviour
 {
     [SerializeField] private KeyCode button = KeyCode.E;
     private GameObject reviveArea;
+    private float timer;
+    private float timeStart = 0.2f;
+    private float timeLimit = 0.60f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        reviveArea = GetComponent<GameObject>();
+        reviveArea = transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
@@ -20,8 +23,17 @@ public class PlayerRevive : MonoBehaviour
     {
         if (Input.GetKeyDown(button))
         {
-            
-            reviveArea.SetActive(true);
+            timer += Time.deltaTime;
+
+            if (timer >= timeStart)
+            {
+                reviveArea.SetActive(true);
+            }
+            else if (timer >= timeLimit)
+            {
+                timer = 0;
+                reviveArea.SetActive(false);
+            }
         }
     }
 }
