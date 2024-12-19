@@ -37,7 +37,6 @@ public class EnemyDetection : MonoBehaviour
         }
         else
         {
-            target = GameObject.Find("Player").transform;
             correctTarget = false;
         }
     }
