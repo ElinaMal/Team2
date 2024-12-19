@@ -6,7 +6,6 @@ public class UndeadRevival : MonoBehaviour
 {
     [SerializeField] private GameObject undead1;
     [SerializeField] private GameObject undead2;
-    [SerializeField] private Animator anim;
     private int whichUndead;
     private bool revived = false;
 
@@ -27,5 +26,6 @@ public class UndeadRevival : MonoBehaviour
     {
         revived = true;
         
+
     }
 }
