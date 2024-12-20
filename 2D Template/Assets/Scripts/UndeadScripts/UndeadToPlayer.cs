@@ -13,42 +13,6 @@ public class UndeadToPlayer : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("Player").transform;
-        List<string> detectedObjects = new List<string>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        detectedObjects.Add(collision.gameObject.name);
-
-        if (detectedObjects.Contains("Player"))
-        {
-            correctTarget = true;
-        }
-        else
-        {
-            correctTarget = false;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collider)
-    {
-        detected = true;
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        detected = false;
-        detectedObjects.Remove(collision.gameObject.name);
-
-        if (detectedObjects.Contains("Player"))
-        {
-            correctTarget = true;
-        }
-        else
-        {
-            correctTarget = false;
-        }
     }
 
     // Update is called once per frame
@@ -56,5 +20,16 @@ public class UndeadToPlayer : MonoBehaviour
     {
         Vector2 enemyToPlayerVector = target.position - transform.position;
         directionToPlayer = enemyToPlayerVector.normalized;
+
+        if (player.distance >= 8)
+        {
+            detected = false;
+            correctTarget = false;
+        }
+        else
+        {
+            detected = true;
+            correctTarget = true;
+        }
     }
 }
