@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1013bb2deaad4c147ac3af7e8cb5bd6b
+guid: 156a3ccca43d1864598d52327aa96f5f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grave Sprites-export_0
+      name: Grave Sprites-export (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
-        width: 320
-        height: 320
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 075dda82443e8a2478b3a70b548cc8c2
-      internalID: -414138302
+      spriteID: 9f3c37eb4fde62348889c5c86bab4340
+      internalID: -902824537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grave Sprites-export_1
+      name: Grave Sprites-export (1)_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
-        width: 320
-        height: 320
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 290ea69231ec3f84f95c1313723742a5
-      internalID: 1398223061
+      spriteID: b5bbedbf321da6b47913c826349d57a1
+      internalID: -1450954212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grave Sprites-export_2
+      name: Grave Sprites-export (1)_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b47ebc750b99b498918556e018c987
+      internalID: 1479202094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grave Sprites-export (1)_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 148122ac5e54af44da0b8734805a6268
-      internalID: 357495785
+      spriteID: 97ba44527e02be540b26a1349dbb62ee
+      internalID: 84219707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grave Sprites-export_3
+      name: Grave Sprites-export (1)_4
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 0
-        width: 320
-        height: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +229,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c1000eea7f115c4b8bfbbf2fc35fe76
-      internalID: 1928244202
+      spriteID: dcdc54b73653a8e48bb2a7fb2923c930
+      internalID: -898794272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grave Sprites-export (1)_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232c6c8b90e15644cb33434e398d9013
+      internalID: 968708044
       vertices: []
       indices: 
       edges: []
@@ -225,10 +267,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grave Sprites-export_0: -414138302
-      Grave Sprites-export_3: 1928244202
-      Grave Sprites-export_2: 357495785
-      Grave Sprites-export_1: 1398223061
+      Grave Sprites-export (1)_5: 968708044
+      Grave Sprites-export (1)_1: -1450954212
+      Grave Sprites-export (1)_3: 84219707
+      Grave Sprites-export (1)_2: 1479202094
+      Grave Sprites-export (1)_4: -898794272
+      Grave Sprites-export (1)_0: -902824537
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
