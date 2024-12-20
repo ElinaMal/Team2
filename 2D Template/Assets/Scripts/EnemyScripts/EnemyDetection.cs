@@ -6,6 +6,7 @@ public class EnemyDetection : MonoBehaviour
     public bool detected;
     public Vector2 directionToPlayer;
     public Transform target;
+    public Transform zombiePrefab;
     public bool correctTarget = false;
     public UndeadToPlayer undeadToPlayer;
     public WhereIsPlayer whereIsPlayer;
@@ -17,6 +18,7 @@ public class EnemyDetection : MonoBehaviour
     {
         target = GameObject.Find("Player").transform;
     }
+        
 
     private void OnTriggerStay2D(Collider2D collider)
     {

@@ -7,7 +7,9 @@ public class UndeadRevival : MonoBehaviour
     [SerializeField] private GameObject undead1;
     [SerializeField] private GameObject undead2;
     [SerializeField] private Animation anim;
+    private EnemyNumberTracker enemyNumberTracker;
     private float whichUndead;
+    [SerializeField] private int undeadLimit = 60;
     [SerializeField] private float skeletonChance;
     private bool revived = false;
 
@@ -26,19 +28,22 @@ public class UndeadRevival : MonoBehaviour
 
     public void RevivalStart()
     {
-        revived = true;
-
-        whichUndead = Random.Range(0, 101);
-
-        if (whichUndead <= skeletonChance)
+        if (enemyNumberTracker.undeadCounter <= undeadLimit)
         {
-            Instantiate(undead1);
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instantiate(undead2);
-            Destroy(gameObject);
+            revived = true;
+
+            whichUndead = Random.Range(0, 101);
+
+            if (whichUndead <= skeletonChance)
+            {
+                Instantiate(undead1);
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instantiate(undead2);
+                Destroy(gameObject);
+            }
         }
     }
 }
