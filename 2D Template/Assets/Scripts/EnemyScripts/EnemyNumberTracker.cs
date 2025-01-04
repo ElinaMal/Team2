@@ -10,11 +10,27 @@ public class EnemyNumberTracker : MonoBehaviour
     public float timePassed = 0;
     public float trueTime;
     public TMPro.TMP_Text scoreText;
+    public TMPro.TMP_Text highScoreText;
+    private float highScore = 0;
 
     void Update() 
     {
         timePassed = Time.time;
         trueTime = (Mathf.Round(timePassed * 100)) / 100;
         scoreText.SetText(trueTime.ToString());
+        ScoreSave(trueTime);
+
+        highScoreText.SetText("High Score: " + PlayerPrefs.GetFloat("HighScore").ToString());
+    }
+
+    void ScoreSave(float score)
+    {
+        highScore = PlayerPrefs.GetFloat("HighScore");
+
+        if (highScore < score)
+        {
+            PlayerPrefs.SetFloat("HighScore", score);
+            PlayerPrefs.Save();
+        }
     }
 }
