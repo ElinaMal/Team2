@@ -27,7 +27,7 @@ public class UndeadRevival : MonoBehaviour
 
     public void RevivalStart()
     {
-        if (enemyNumberTracker.undeadCounter < undeadLimit)
+        if (enemyNumberTracker.undeadCounter <= undeadLimit)
         {
             revived = true;
 
@@ -35,12 +35,14 @@ public class UndeadRevival : MonoBehaviour
 
             if (whichUndead <= skeletonChance)
             {
-                Instantiate(undead1);
+                Instantiate(undead1, transform.position, transform.rotation);
+                enemyNumberTracker.undeadCounter++;
                 Destroy(gameObject);
             }
             else
             {
-                Instantiate(undead2);
+                Instantiate(undead2, transform.position, transform.rotation);
+                enemyNumberTracker.undeadCounter++;
                 Destroy(gameObject);
             }
         }

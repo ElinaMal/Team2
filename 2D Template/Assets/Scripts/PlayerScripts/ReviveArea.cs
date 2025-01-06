@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReviveArea : MonoBehaviour
 {
+    public Transform target;
 
     // Start is called before the first frame update
     void Start()
@@ -11,9 +12,11 @@ public class ReviveArea : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.GetComponent<UndeadRevival>() != null && collision.CompareTag("Corpse"))
+        target = collision.gameObject.transform;
+
+        if (collision.gameObject.CompareTag("Corpse"))
         {
             UndeadRevival undeadRevival = collision.GetComponent<UndeadRevival>();
             undeadRevival.RevivalStart();
