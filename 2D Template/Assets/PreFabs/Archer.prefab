@@ -117,6 +117,7 @@ MonoBehaviour:
   detected: 0
   directionToPlayer: {x: 0, y: 0}
   target: {fileID: 0}
+  zombiePrefab: {fileID: 0}
   correctTarget: 0
   undeadToPlayer: {fileID: 0}
   whereIsPlayer: {fileID: 0}
@@ -198,8 +199,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -707545207
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 712141325, guid: 3e55d35960ef47a4387c2676012064ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -317,6 +318,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  Pierce: 0
+  Slash: 0
+  Blunt: 0
+  AN: 0
+  Burn: 0
+  burnAmount: 0
+  burnDamage: 0
 --- !u!95 &5084223092143937689
 Animator:
   serializedVersion: 4
@@ -352,6 +360,13 @@ MonoBehaviour:
   health: 2
   MAX_HEALTH: 2
   defense: 0
+  pierceRes: 0
+  slashRes: 0
+  bluntRes: 0
+  burnRes: 0
+  burnTicks: 0
+  burnDelta: 0
+  burnDamage: 0
   anim: {fileID: 5084223092143937689}
   isDead: 0
 --- !u!70 &521889598717203751
