@@ -6,7 +6,6 @@ public class UndeadRevival : MonoBehaviour
 {
     [SerializeField] private GameObject undead1;
     [SerializeField] private GameObject undead2;
-    [SerializeField] private Animation anim;
     private EnemyNumberTracker enemyNumberTracker;
     private float whichUndead;
     [SerializeField] private int undeadLimit = 60;
@@ -28,7 +27,7 @@ public class UndeadRevival : MonoBehaviour
 
     public void RevivalStart()
     {
-        if (enemyNumberTracker.undeadCounter <= undeadLimit)
+        if (enemyNumberTracker.undeadCounter < undeadLimit)
         {
             revived = true;
 
