@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerRevive : MonoBehaviour
 {
-    [SerializeField] private KeyCode button = KeyCode.E;
     private GameObject reviveArea;
     private float timer;
     private float timeStart = 0.2f;
@@ -15,13 +14,13 @@ public class PlayerRevive : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        reviveArea = transform.GetChild(1).gameObject;
+        reviveArea = transform.GetChild(2).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(button))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             timer += Time.deltaTime;
 

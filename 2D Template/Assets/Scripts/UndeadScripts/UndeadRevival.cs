@@ -6,7 +6,6 @@ public class UndeadRevival : MonoBehaviour
 {
     [SerializeField] private GameObject undead1;
     [SerializeField] private GameObject undead2;
-    [SerializeField] private Animation anim;
     private EnemyNumberTracker enemyNumberTracker;
     private float whichUndead;
     [SerializeField] private int undeadLimit = 60;
@@ -36,12 +35,14 @@ public class UndeadRevival : MonoBehaviour
 
             if (whichUndead <= skeletonChance)
             {
-                Instantiate(undead1);
+                Instantiate(undead1, transform.position, transform.rotation);
+                enemyNumberTracker.undeadCounter++;
                 Destroy(gameObject);
             }
             else
             {
-                Instantiate(undead2);
+                Instantiate(undead2, transform.position, transform.rotation);
+                enemyNumberTracker.undeadCounter++;
                 Destroy(gameObject);
             }
         }

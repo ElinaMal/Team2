@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class WizardDeathScript : StateMachineBehaviour
 {
@@ -21,7 +22,7 @@ public class WizardDeathScript : StateMachineBehaviour
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Instantiate(enemyPrefab);
+        Instantiate(enemyPrefab, animator.gameObject.transform.position, animator.gameObject.transform.rotation);
         Destroy(animator.gameObject);
     }
 
