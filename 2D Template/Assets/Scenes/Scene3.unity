@@ -741,6 +741,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5795616356853640444, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 417.42572
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0972
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0972
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508760, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0972
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795616357013508761, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: m_Color.a
+      value: 0.74509805
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
