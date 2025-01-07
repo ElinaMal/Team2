@@ -6,6 +6,14 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class WizardDeathScript : StateMachineBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
+    private GameObject numberTracker;
+    private EnemyNumberTracker enemyNumberTracker;
+
+    void Start()
+    {
+        numberTracker = GameObject.Find("EnemyNumberTracker");
+        enemyNumberTracker = numberTracker.GetComponent<EnemyNumberTracker>();
+    }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -23,6 +31,7 @@ public class WizardDeathScript : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Instantiate(enemyPrefab, animator.gameObject.transform.position, animator.gameObject.transform.rotation);
+        enemyNumberTracker.enemyCounter--;
         Destroy(animator.gameObject);
     }
 
