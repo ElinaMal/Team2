@@ -6,7 +6,7 @@ using static Unity.Mathematics.math;
 public class EnemyNumberTracker : MonoBehaviour
 {
     public int enemyCounter = 0;
-    public int undeadCounter = 0;
+    public int undeadCounter = 1;
     public float timePassed = 0;
     public float trueTime;
     public TMPro.TMP_Text scoreText;

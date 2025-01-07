@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] public bool slashRes = false;
     [SerializeField] public bool bluntRes = false;
     [SerializeField] public bool burnRes = false;
+
     //public bool isBurning = false;
 
     public int burnTicks = 0;
@@ -26,6 +27,7 @@ public class Health : MonoBehaviour
     
 
     public bool isDead = false;
+
 
     // Update is called once per frame
     void Update()
@@ -144,6 +146,7 @@ public class Health : MonoBehaviour
         isDead = true;
         gameObject.tag = "Dead";
 
+
         if (GetComponent<EnemyMovement>() != null)
         {
             GetComponent<EnemyMovement>().enabled = false;
@@ -173,5 +176,4 @@ public class Health : MonoBehaviour
             GetComponent<CapsuleCollider2D>().enabled = false;
         }
     }
-
 }
