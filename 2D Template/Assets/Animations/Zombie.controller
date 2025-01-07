@@ -281,12 +281,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isDying
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 0}
   - m_Name: isAttacking
     m_Type: 4
@@ -294,6 +295,9 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+=======
+    m_Controller: {fileID: 9100000}
+>>>>>>> 588839e2898656b905445fa4c626beac11c7232f
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -373,3 +377,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a26a6c3a62c76444aa33f77b4b53168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 5
