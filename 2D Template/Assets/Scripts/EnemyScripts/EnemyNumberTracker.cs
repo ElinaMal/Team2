@@ -6,11 +6,10 @@ using static Unity.Mathematics.math;
 public class EnemyNumberTracker : MonoBehaviour
 {
     public int enemyCounter = 0;
-    public int undeadCounter = 0;
+    public int undeadCounter = 1;
     public float timePassed = 0;
     public float trueTime;
     public TMPro.TMP_Text scoreText;
-    public TMPro.TMP_Text highScoreText;
     private float highScore = 0;
 
     void Update() 
@@ -19,8 +18,6 @@ public class EnemyNumberTracker : MonoBehaviour
         trueTime = (Mathf.Round(timePassed * 100)) / 100;
         scoreText.SetText(trueTime.ToString());
         ScoreSave(trueTime);
-
-        highScoreText.SetText("High Score: " + PlayerPrefs.GetFloat("HighScore").ToString());
     }
 
     void ScoreSave(float score)
