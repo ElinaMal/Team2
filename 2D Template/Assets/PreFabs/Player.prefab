@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5721a944157bf1448f75f60e6c8e316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: 101
 --- !u!1 &3306738516766201326
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8880001640165397980
 Transform:
   m_ObjectHideFlags: 0
@@ -687,6 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da962d25728f06847916702e176cd95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!58 &8804747792941227636
 CircleCollider2D:
   m_ObjectHideFlags: 0

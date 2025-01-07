@@ -6,15 +6,16 @@ using UnityEngine;
 public class PlayerRevive : MonoBehaviour
 {
     private GameObject reviveArea;
+    private bool revived = false;
     private float timer;
-    private float timeStart = 0.2f;
-    private float timeLimit = 0.60f;
+    private float timeStart = 0.3f;
+    private float timeLimit = 0.6f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        reviveArea = transform.GetChild(2).gameObject;
+        reviveArea = transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
@@ -22,17 +23,32 @@ public class PlayerRevive : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            timer += Time.deltaTime;
+            Revive();
+        }
 
+        if (revived)
+        {
             if (timer >= timeStart)
             {
                 reviveArea.SetActive(true);
             }
-            else if (timer >= timeLimit)
+        }
+
+        if (revived)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= timeLimit)
             {
                 timer = 0;
+                revived = false;
                 reviveArea.SetActive(false);
             }
         }
+    }
+
+    void Revive()
+    {
+        revived = true;
     }
 }

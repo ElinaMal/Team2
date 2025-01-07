@@ -6,17 +6,18 @@ public class UndeadRevival : MonoBehaviour
 {
     [SerializeField] private GameObject undead1;
     [SerializeField] private GameObject undead2;
+    private GameObject numberTracker;
     private EnemyNumberTracker enemyNumberTracker;
     private float whichUndead;
     [SerializeField] private int undeadLimit = 60;
     [SerializeField] private float skeletonChance;
-    private bool revived = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        numberTracker = GameObject.Find("EnemyNumberTracker");
+        enemyNumberTracker = numberTracker.GetComponent<EnemyNumberTracker>();
     }
 
     // Update is called once per frame
@@ -27,12 +28,10 @@ public class UndeadRevival : MonoBehaviour
 
     public void RevivalStart()
     {
+        whichUndead = Random.Range(0, 101);
+
         if (enemyNumberTracker.undeadCounter <= undeadLimit)
         {
-            revived = true;
-
-            whichUndead = Random.Range(0, 101);
-
             if (whichUndead <= skeletonChance)
             {
                 Instantiate(undead1, transform.position, transform.rotation);
