@@ -25,8 +25,11 @@ public class ZombieDeathScript : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemyNumberTracker.undeadCounter--;
-        //StartCoroutine(WaitUntilDisappear());
-        Destroy(animator.gameObject);
+        WaitUntilDisappear();
+        if (!wait)
+        {
+            Destroy(animator.gameObject);
+        }
     }
 
     IEnumerator WaitUntilDisappear()
