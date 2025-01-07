@@ -121,6 +121,7 @@ MonoBehaviour:
   zombiePrefab: {fileID: 0}
   correctTarget: 0
   undeadToPlayer: {fileID: 8724719183142094790}
+  chasePlayer: {fileID: 0}
   whereIsPlayer: {fileID: 3405704392289787855}
   closeEnough: 0
   targetTag: BadGuys
@@ -310,7 +311,7 @@ MonoBehaviour:
   velocity: 15
   anim: {fileID: 6428650313319347633}
   undeadToPlayer: {fileID: 8724719183142094790}
-  EnemyDetection: {fileID: 2427674873133561702}
+  enemyChasing: {fileID: 4981938966152942870}
 --- !u!114 &3844384562399825714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +346,7 @@ Animator:
   m_GameObject: {fileID: 2520239519232593964}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b2b74099f417a7a4eb5cd52ef9b343d2, type: 2}
+  m_Controller: {fileID: 9100000, guid: be7a07d1c4f398747bf91acdcf82aa07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -369,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   directionToPlayer: {x: 0, y: 0}
+  enemyChasing: {fileID: 4981938966152942870}
   target: {fileID: 5078307215131975666}
   player: {fileID: 3405704392289787855}
   correctTarget: 0
-  detectedObjects: []

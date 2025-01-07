@@ -5,10 +5,10 @@ public class UndeadToPlayer : MonoBehaviour
 {
     public bool detected = false;
     public Vector2 directionToPlayer;
+    public EnemyChasing enemyChasing;
     public Transform target;
     public WhereIsPlayer player;
     public bool correctTarget = false;
-    public List<string> detectedObjects;
 
     void Start()
     {
@@ -23,11 +23,13 @@ public class UndeadToPlayer : MonoBehaviour
 
         if (player.distance >= 8)
         {
+            enemyChasing.enabled = false;
             detected = false;
             correctTarget = false;
         }
         else
         {
+            enemyChasing.enabled = true;
             detected = true;
             correctTarget = true;
         }

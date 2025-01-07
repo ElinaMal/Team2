@@ -7,7 +7,7 @@ public class UndeadChasePlayer : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     public UndeadToPlayer undeadToPlayer;
-    public EnemyDetection EnemyDetection;
+    public EnemyChasing enemyChasing;
     private Vector2 targetDirection;
     private bool facingLeft;
 

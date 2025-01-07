@@ -9,6 +9,7 @@ public class EnemyDetection : MonoBehaviour
     public Transform zombiePrefab;
     public bool correctTarget = false;
     public UndeadToPlayer undeadToPlayer;
+    public UndeadChasePlayer chasePlayer;
     public WhereIsPlayer whereIsPlayer;
     public bool closeEnough;
     private bool wait;
@@ -30,9 +31,14 @@ public class EnemyDetection : MonoBehaviour
             {
                 if (gameObject.CompareTag("GoodGuysZone") && closeEnough)
                 {
-                    undeadToPlayer.enabled = false;
+                    
                 }
 
+                if (gameObject.CompareTag("GoodGuys"))
+                {
+                    chasePlayer.enabled = false;
+                }
+                
                 target = collider.gameObject.transform;
                 correctTarget = true;
             }
@@ -55,7 +61,7 @@ public class EnemyDetection : MonoBehaviour
         Vector2 enemyToPlayerVector = target.position - transform.position;
         directionToPlayer = enemyToPlayerVector.normalized;
 
-        if (gameObject.CompareTag("GoodGuysZone"))
+        if (gameObject.CompareTag("GoodGuysZone") || gameObject.CompareTag("GoodGuys"))
         {
             if (whereIsPlayer.distance < 16)
             {
@@ -63,7 +69,14 @@ public class EnemyDetection : MonoBehaviour
             }
             else
             {
-                undeadToPlayer.enabled = true;
+                if (undeadToPlayer != null)
+                {
+                    
+                }
+                if (chasePlayer != null)
+                {
+                    chasePlayer.enabled = true;
+                }
 
                 closeEnough = false;
             }
