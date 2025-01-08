@@ -121,7 +121,7 @@ MonoBehaviour:
   zombiePrefab: {fileID: 0}
   correctTarget: 0
   undeadToPlayer: {fileID: 8724719183142094790}
-  chasePlayer: {fileID: 0}
+  chasePlayer: {fileID: 9035361353265565374}
   whereIsPlayer: {fileID: 3405704392289787855}
   closeEnough: 0
   targetTag: BadGuys

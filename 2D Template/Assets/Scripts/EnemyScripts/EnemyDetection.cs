@@ -14,6 +14,7 @@ public class EnemyDetection : MonoBehaviour
     public bool closeEnough;
     private bool wait;
     [SerializeField] private string targetTag;
+    private float distanceTarget;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class EnemyDetection : MonoBehaviour
             {
                 if (gameObject.CompareTag("GoodGuysZone") && closeEnough)
                 {
-                    
+                    undeadToPlayer.enabled = false;
                 }
 
                 if (gameObject.CompareTag("GoodGuys"))
@@ -61,24 +62,26 @@ public class EnemyDetection : MonoBehaviour
         Vector2 enemyToPlayerVector = target.position - transform.position;
         directionToPlayer = enemyToPlayerVector.normalized;
 
+        distanceTarget = enemyToPlayerVector.magnitude;
+
         if (gameObject.CompareTag("GoodGuysZone") || gameObject.CompareTag("GoodGuys"))
         {
-            if (whereIsPlayer.distance < 16)
+            if (whereIsPlayer.distance < 18 && distanceTarget < 18)
             {
                 closeEnough = true;
             }
             else
             {
+                closeEnough = false;
+
                 if (undeadToPlayer != null)
                 {
-                    
+                    undeadToPlayer.enabled = true;
                 }
                 if (chasePlayer != null)
                 {
                     chasePlayer.enabled = true;
                 }
-
-                closeEnough = false;
             }
         }
     }
