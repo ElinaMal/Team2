@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7438606449476007493, guid: a428805dc8fd70443bd5dfc499f9be5c, type: 3}
-  existingDeadBody: {fileID: 7438606449476007493, guid: a428805dc8fd70443bd5dfc499f9be5c, type: 3}
+  numberTracker: {fileID: 4337568259814693641, guid: d6bdb7bc63c47624ca4d0badb90abe9f, type: 3}
 --- !u!1101 &1445476304446718711
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
