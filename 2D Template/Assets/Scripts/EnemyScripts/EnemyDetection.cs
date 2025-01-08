@@ -6,7 +6,6 @@ public class EnemyDetection : MonoBehaviour
     public bool detected;
     public Vector2 directionToPlayer;
     public Transform target;
-    public Transform zombiePrefab;
     public bool correctTarget = false;
     public UndeadToPlayer undeadToPlayer;
     public UndeadChasePlayer chasePlayer;
@@ -59,6 +58,11 @@ public class EnemyDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (target == null)
+        {
+            target = target = GameObject.Find("Player").transform;
+        }
+
         Vector2 enemyToPlayerVector = target.position - transform.position;
         directionToPlayer = enemyToPlayerVector.normalized;
 
