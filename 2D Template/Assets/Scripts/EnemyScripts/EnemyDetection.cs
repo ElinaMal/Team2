@@ -66,7 +66,22 @@ public class EnemyDetection : MonoBehaviour
 
         if (gameObject.CompareTag("GoodGuysZone") || gameObject.CompareTag("GoodGuys"))
         {
-            if (whereIsPlayer.distance < 18 && distanceTarget < 18)
+            //
+            if (whereIsPlayer.distance < 2)
+            {
+                closeEnough = false;
+
+                if (undeadToPlayer != null)
+                {
+                    undeadToPlayer.enabled = true;
+                }
+                if (chasePlayer != null)
+                {
+                    chasePlayer.enabled = true;
+                }
+            }
+            //
+            else if (whereIsPlayer.distance < 18 && distanceTarget < 18)
             {
                 closeEnough = true;
             }

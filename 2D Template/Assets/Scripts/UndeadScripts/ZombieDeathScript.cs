@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class ZombieDeathScript : StateMachineBehaviour
 {
-    private GameObject numberTracker;
-    private EnemyNumberTracker enemyNumberTracker;
-    private bool wait;
-    [SerializeField] private float waitTime = 5;
+    [SerializeField] private GameObject undeadPrefab;
+    [SerializeField] private GameObject numberTracker;
 
+    void Start()
+    {
+        numberTracker = GameObject.Find("EnemyNumberTracker");
+        EnemyNumberTracker enemyNumberTracker = numberTracker.GetComponent<EnemyNumberTracker>();
+        enemyNumberTracker.undeadCounter--;
+    }
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -24,19 +28,8 @@ public class ZombieDeathScript : StateMachineBehaviour
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyNumberTracker.undeadCounter--;
-        WaitUntilDisappear();
-        if (!wait)
-        {
-            Destroy(animator.gameObject);
-        }
-    }
-
-    IEnumerator WaitUntilDisappear()
-    {
-        wait = true;
-        yield return new WaitForSeconds(waitTime);
-        wait = false;
+        Instantiate(undeadPrefab, animator.gameObject.transform.position, animator.gameObject.transform.rotation);
+        Destroy(animator.gameObject);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
