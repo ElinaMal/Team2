@@ -6,8 +6,6 @@ public class Movement : MonoBehaviour
     [SerializeField] public float maxSpeed = 15;
     bool facingLeft = false;
     public Animator anim;
-    
-
     private Rigidbody2D _rb;
 
     // Start is called before the first frame update
