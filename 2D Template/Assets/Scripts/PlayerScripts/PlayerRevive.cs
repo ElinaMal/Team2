@@ -11,7 +11,6 @@ public class PlayerRevive : MonoBehaviour
     private float timeStart = 0.3f;
     private float timeLimit = 0.6f;
 
-
     // Start is called before the first frame update
     void Start()
     {
