@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5237639003023710596}
   m_Layer: 0
   m_Name: Werewolf
-  m_TagString: Untagged
+  m_TagString: BadGuys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68df4794cfa0ee7439933b934aa57414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  MAX_HEALTH: 100
-  defense: 1
+  health: 5
+  MAX_HEALTH: 5
+  defense: 0
   pierceRes: 0
   slashRes: 0
   bluntRes: 0
@@ -228,13 +228,16 @@ GameObject:
   m_Component:
   - component: {fileID: 7677184399108406647}
   - component: {fileID: 5862965081558015367}
+  - component: {fileID: 7850491812194035133}
+  - component: {fileID: 2385129773459908935}
+  - component: {fileID: 5120973173050090663}
   m_Layer: 6
   m_Name: AttackZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7677184399108406647
 Transform:
   m_ObjectHideFlags: 0
@@ -302,6 +305,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &7850491812194035133
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444351948077034565}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 5}
+  m_Direction: 0
+--- !u!61 &2385129773459908935
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444351948077034565}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
+--- !u!114 &5120973173050090663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444351948077034565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd42306dab70fb949baeb49d7f4ceab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  targetTag: GoodGuys
+  Pierce: 0
+  Slash: 1
+  Blunt: 0
+  AN: 0
+  Burn: 0
+  burnAmount: 0
+  burnDamage: 0
 --- !u!1 &5322110300341589296
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3646314543924736231}
   - component: {fileID: 8645497771893601084}
+  - component: {fileID: 6811844381124613748}
   m_Layer: 6
   m_Name: MeleeRotatePoint
   m_TagString: Untagged
@@ -347,7 +414,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a316a79bb6a7a5548b2bbcb1cafc5208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  parentAnim: {fileID: 0}
+  attackArea: {fileID: 3444351948077034565}
   targetDetectorObject: {fileID: 6030741476425193246}
+  parentObject: {fileID: 2612339217435155810}
+  targetTag: GoodGuys
+--- !u!70 &6811844381124613748
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5322110300341589296}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.55, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1 &6030741476425193246
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,8 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   directionToPlayer: {x: 0, y: 0}
-  target: {fileID: 0}
-  zombiePrefab: {fileID: 0}
+  target: {fileID: 1297974967114297794}
   correctTarget: 0
   undeadToPlayer: {fileID: 0}
   chasePlayer: {fileID: 0}
