@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a316a79bb6a7a5548b2bbcb1cafc5208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDelay: 0.5
   anim: {fileID: 0}
   parentAnim: {fileID: 0}
   attackArea: {fileID: 3444351948077034565}

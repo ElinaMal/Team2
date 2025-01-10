@@ -7,7 +7,10 @@ public class NPCMeleeAttack : MonoBehaviour
 {
     private Transform target;
     private bool attacking;
+    private bool canAttack;
     private float timer;
+    private float attackTimer;
+    public float attackDelay;
     public Animator anim;
     public Animator parentAnim;
 
@@ -42,21 +45,31 @@ public class NPCMeleeAttack : MonoBehaviour
             if (timer >= 0.5f)
             {
                 attacking = false;
+                timer = 0;
             }
+        }
+
+        attackTimer += Time.deltaTime;
+
+        if (attackTimer >= attackDelay)
+        {
+            canAttack = true;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag(targetTag))
+        if (collider.gameObject.CompareTag(targetTag) && canAttack)
         {
             attacking = true;
             attackArea.SetActive(attacking);
             anim.SetBool("isAttacking", true);
             parentAnim.SetBool("isAttacking", true);
+            canAttack = false;
+            attackTimer = 0;
         }
     }
-            private void findTarget()
+    private void findTarget()
     {
         EnemyDetection targetDetector = targetDetectorObject.GetComponent<EnemyDetection>();
         target = targetDetector.target;
