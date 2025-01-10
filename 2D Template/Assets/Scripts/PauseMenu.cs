@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-    private GameObject numberTracker;
-    private EnemyNumberTracker enemyNumberTracker;
+    [SerializeField] private EnemyNumberTracker enemyNumberTracker;
 
     public void Pause()
     {
@@ -29,5 +28,6 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        enemyNumberTracker.timePassed = 0;
     }
 }

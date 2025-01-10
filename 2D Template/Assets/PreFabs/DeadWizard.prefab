@@ -101,7 +101,7 @@ MonoBehaviour:
   undead1: {fileID: 8309029668435182494, guid: 11f66af464b7ec84eac08b5da21aafe8, type: 3}
   undead2: {fileID: 3765342280887728469, guid: c7559c459911f2e45b72ff7c66912f86, type: 3}
   undeadLimit: 60
-  skeletonChance: 5
+  skeletonChance: 80
 --- !u!61 &3438227694033086336
 BoxCollider2D:
   m_ObjectHideFlags: 0

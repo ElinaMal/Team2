@@ -14,7 +14,7 @@ public class EnemyNumberTracker : MonoBehaviour
 
     void Update() 
     {
-        timePassed = Time.time;
+        timePassed += Time.deltaTime;
         trueTime = (Mathf.Round(timePassed * 100)) / 100;
         scoreText.SetText(trueTime.ToString());
         ScoreSave(trueTime);
