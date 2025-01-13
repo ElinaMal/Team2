@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 5795616356853640444}
-  enemyNumberTracker: {fileID: 0}
+  enemyNumberTracker: {fileID: 4337568259814693642, guid: d6bdb7bc63c47624ca4d0badb90abe9f, type: 3}
 --- !u!1 &5795616357013508767
 GameObject:
   m_ObjectHideFlags: 0
