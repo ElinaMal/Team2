@@ -154,6 +154,7 @@ MonoBehaviour:
   health: 10
   MAX_HEALTH: 10
   defense: 1
+  attackArea: {fileID: 0}
   pierceRes: 0
   slashRes: 0
   bluntRes: 0
@@ -237,7 +238,7 @@ MonoBehaviour:
   shootRate: 5
   shootTimer: 1
   projectileMaxHeight: 0.5
-  distanceToTargetToDestroyProjectile: 0.1
+  distanceToTargetToDestroyProjectile: 0.01
   maxMoveSpeed: 5
   destroyTime: 10
   damage: 4
@@ -447,9 +448,9 @@ MonoBehaviour:
   detected: 0
   directionToPlayer: {x: 0, y: 0}
   target: {fileID: 5807890615252592710}
-  zombiePrefab: {fileID: 0}
   correctTarget: 0
   undeadToPlayer: {fileID: 0}
+  chasePlayer: {fileID: 0}
   whereIsPlayer: {fileID: 0}
   closeEnough: 0
   targetTag: GoodGuys

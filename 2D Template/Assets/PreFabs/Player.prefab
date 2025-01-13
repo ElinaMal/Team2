@@ -280,6 +280,7 @@ MonoBehaviour:
   health: 8
   MAX_HEALTH: 8
   defense: 0
+  attackArea: {fileID: 3306738517642876209}
   pierceRes: 0
   slashRes: 0
   bluntRes: 0
