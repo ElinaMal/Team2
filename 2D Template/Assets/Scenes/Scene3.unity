@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5795616356853640446, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
+      propertyPath: enemyNumberTracker
+      value: 
+      objectReference: {fileID: 4337568259814693642, guid: d6bdb7bc63c47624ca4d0badb90abe9f, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e972c2cdc6f3764b8beaab81fcaf484, type: 3}
