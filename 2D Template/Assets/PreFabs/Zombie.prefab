@@ -396,6 +396,7 @@ MonoBehaviour:
   health: 2
   MAX_HEALTH: 2
   defense: 0
+  attackArea: {fileID: 2415198174124652694}
   pierceRes: 0
   slashRes: 0
   bluntRes: 0
@@ -584,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42306dab70fb949baeb49d7f4ceab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   targetTag: BadGuys
   Pierce: 0
   Slash: 1

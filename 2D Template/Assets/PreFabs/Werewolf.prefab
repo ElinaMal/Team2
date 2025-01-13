@@ -154,6 +154,7 @@ MonoBehaviour:
   health: 5
   MAX_HEALTH: 5
   defense: 0
+  attackArea: {fileID: 5322110300341589296}
   pierceRes: 0
   slashRes: 0
   bluntRes: 0
@@ -260,7 +261,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3444351948077034565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42306dab70fb949baeb49d7f4ceab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   targetTag: GoodGuys
   Pierce: 0
   Slash: 1

@@ -8,6 +8,8 @@ public class Health : MonoBehaviour
 
     [SerializeField] public int defense = 1;
 
+    [SerializeField] public GameObject attackArea;
+
     [SerializeField] public bool pierceRes = false;
     [SerializeField] public bool slashRes = false;
     [SerializeField] public bool bluntRes = false;
@@ -146,7 +148,14 @@ public class Health : MonoBehaviour
         isDead = true;
         gameObject.tag = "Dead";
 
-
+        if (attackArea != null)
+        {
+            attackArea.SetActive(false);
+        }
+        if (GetComponent<NPCRangedAttack>() != null)
+        {
+            GetComponent<NPCRangedAttack>().enabled = false;
+        }
         if (GetComponent<EnemyMovement>() != null)
         {
             GetComponent<EnemyMovement>().enabled = false;
