@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f82554b2a67d34e942b295d0a5ab0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3879945122344325303, guid: b087903580387b34fa7ed0cbfe3fe9b3, type: 3}
+  bullet: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
   targetDetectorObject: {fileID: 2398090379726644389}
   target: {fileID: 0}
   anim: {fileID: 4342438232145679598}
