@@ -480,10 +480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273c3cf2e3cafb9478226bfd4d31026a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
+  bullet: {fileID: 3879945122344325303, guid: fb48650b8c3f6794ca14f710ddc46003, type: 3}
   bulletTransform: {fileID: 3306738516223987384}
   canFire: 1
-  timeBetweenFiring: 0.1
+  timeBetweenFiring: 0.5
   Shoot: 323
   anim: {fileID: 0}
   projectileMaxHeight: 0.5
