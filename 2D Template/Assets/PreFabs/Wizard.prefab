@@ -134,12 +134,12 @@ GameObject:
   - component: {fileID: 1975230422293424171}
   - component: {fileID: 4145358638890109515}
   - component: {fileID: 5123537903538445585}
-  - component: {fileID: 2623161603188644457}
   - component: {fileID: 2360202807612167291}
   - component: {fileID: 1203683106939412433}
   - component: {fileID: 5056267584471166752}
   - component: {fileID: 4342438232145679598}
   - component: {fileID: 7681676190780113171}
+  - component: {fileID: 3783670300093812551}
   m_Layer: 7
   m_Name: Wizard
   m_TagString: BadGuys
@@ -236,32 +236,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &2623161603188644457
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8848086004361659328}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.050740242, y: -0.20757389}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.533144, y: 0.58849716}
-  m_EdgeRadius: 0
 --- !u!114 &2360202807612167291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,3 +437,19 @@ MonoBehaviour:
   Burn: 0
   burnAmount: 0
   burnDamage: 0
+--- !u!70 &3783670300093812551
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848086004361659328}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.012488365, y: -0.056197643}
+  m_Size: {x: 0.47641563, y: 0.938488}
+  m_Direction: 0

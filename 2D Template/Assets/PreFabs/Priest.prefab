@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 5807890615252592710}
   - component: {fileID: 5807890615252592711}
   - component: {fileID: -5183527830444891481}
-  - component: {fileID: -4359873816059688470}
   - component: {fileID: 6310121435996640104}
   - component: {fileID: 3736332685495959682}
   - component: {fileID: 346921431440084572}
   - component: {fileID: 3419327845009339725}
   - component: {fileID: 7827299594931818999}
+  - component: {fileID: 640057704606974225}
   m_Layer: 0
   m_Name: Priest
   m_TagString: BadGuys
@@ -113,32 +113,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &-4359873816059688470
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5807890615252592704}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.044104457, y: -0.23149338}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3499782, y: 0.4578753}
-  m_EdgeRadius: 0
 --- !u!114 &6310121435996640104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +305,22 @@ MonoBehaviour:
   Burn: 0
   burnAmount: 0
   burnDamage: 0
+--- !u!70 &640057704606974225
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807890615252592704}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04041314, y: 0.015155017}
+  m_Size: {x: 0.38346195, y: 1.0401806}
+  m_Direction: 0
 --- !u!1 &7619713901265038090
 GameObject:
   m_ObjectHideFlags: 0
