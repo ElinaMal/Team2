@@ -220,11 +220,11 @@ GameObject:
   - component: {fileID: 9055524508861993977}
   - component: {fileID: 6109026696690034499}
   - component: {fileID: 4981938966152942870}
-  - component: {fileID: 4263997726465463705}
   - component: {fileID: 9035361353265565374}
   - component: {fileID: 3844384562399825714}
   - component: {fileID: 6428650313319347633}
   - component: {fileID: 8724719183142094790}
+  - component: {fileID: 742585235604345275}
   m_Layer: 6
   m_Name: Zombie
   m_TagString: GoodGuys
@@ -339,32 +339,6 @@ MonoBehaviour:
   undeadToPlayer: {fileID: 8724719183142094790}
   undeadChasePlayer: {fileID: 9035361353265565374}
   anim: {fileID: 6428650313319347633}
---- !u!61 &4263997726465463705
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2520239519232593964}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.043658793, y: -0.2192629}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.2960477, y: 0.43027347}
-  m_EdgeRadius: 0
 --- !u!114 &9035361353265565374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,6 +418,22 @@ MonoBehaviour:
   target: {fileID: 5078307215131975666}
   player: {fileID: 3405704392289787855}
   correctTarget: 0
+--- !u!70 &742585235604345275
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520239519232593964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06731783, y: -0.043756604}
+  m_Size: {x: 0.3978348, y: 0.956573}
+  m_Direction: 0
 --- !u!1 &7738017383419450410
 GameObject:
   m_ObjectHideFlags: 0
