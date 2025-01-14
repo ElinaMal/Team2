@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 8570617910451359594}
   - component: {fileID: 4164480597818973980}
   - component: {fileID: 7701698267204314439}
-  - component: {fileID: 9157117679701019692}
   - component: {fileID: 2824638132417620624}
   - component: {fileID: 1542202367743923418}
   - component: {fileID: 3898751642359184195}
   - component: {fileID: 5237639003023710596}
+  - component: {fileID: 8835069740394464765}
   m_Layer: 0
   m_Name: Werewolf
   m_TagString: BadGuys
@@ -113,32 +113,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &9157117679701019692
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2612339217435155810}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.030019984, y: -0.09756458}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5590464, y: 0.8142152}
-  m_EdgeRadius: 0
 --- !u!114 &2824638132417620624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +193,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &8835069740394464765
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612339217435155810}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010470569, y: 0.04711789}
+  m_Size: {x: 0.47128594, y: 1.1309365}
+  m_Direction: 0
 --- !u!1 &3444351948077034565
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +456,7 @@ Transform:
   m_GameObject: {fileID: 6030741476425193246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16, y: 16, z: 7.67259}
+  m_LocalScale: {x: 12, y: 12, z: 7.67259}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8570617910451359594}

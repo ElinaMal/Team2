@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2287283316397982100
 MonoBehaviour:
@@ -47,4 +47,5 @@ MonoBehaviour:
   enemyPrefab: {fileID: 5807890615252592704, guid: 6763ffe2fec79a74faa03e999571da4f, type: 3}
   minSpawnTime: 2
   maxSpawnTime: 5
-  spawn: {fileID: 46710952899710030, guid: 4117ab592277f5f4fbef4e0be3e471ff, type: 3}
+  enemyNumberLimit: 40
+  enemyNumber: {fileID: 4337568259814693642, guid: d6bdb7bc63c47624ca4d0badb90abe9f, type: 3}

@@ -11,13 +11,20 @@ public class EnemyNumberTracker : MonoBehaviour
     public float trueTime;
     public TMPro.TMP_Text scoreText;
     private float highScore = 0;
+    public float levelUpScore = 0;
 
     void Update() 
     {
         timePassed += Time.deltaTime;
+        levelUpScore += Time.deltaTime;
         trueTime = (Mathf.Round(timePassed * 100)) / 100;
         scoreText.SetText(trueTime.ToString());
         ScoreSave(trueTime);
+
+        if (levelUpScore > 30)
+        {
+            levelUpScore = 0;
+        }
     }
 
     void ScoreSave(float score)
