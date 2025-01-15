@@ -116,10 +116,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   directionToPlayer: {x: 0, y: 0}
-  target: {fileID: 0}
-  zombiePrefab: {fileID: 0}
+  target: {fileID: 6637062072155341795}
   correctTarget: 0
   undeadToPlayer: {fileID: 0}
+  chasePlayer: {fileID: 0}
   whereIsPlayer: {fileID: 0}
   closeEnough: 0
   targetTag: GoodGuys
@@ -137,9 +137,12 @@ GameObject:
   - component: {fileID: 5084223092143937689}
   - component: {fileID: 8940326175842358441}
   - component: {fileID: 521889598717203751}
+  - component: {fileID: 5610093938563920001}
+  - component: {fileID: 8139739968880079360}
+  - component: {fileID: 6528068382278961604}
   m_Layer: 0
   m_Name: Archer
-  m_TagString: Untagged
+  m_TagString: BadGuys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,8 +159,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7348322013524899468}
   - {fileID: 824761742133797616}
+  - {fileID: 7348322013524899468}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -360,6 +363,7 @@ MonoBehaviour:
   health: 2
   MAX_HEALTH: 2
   defense: 0
+  attackArea: {fileID: 0}
   pierceRes: 0
   slashRes: 0
   bluntRes: 0
@@ -385,6 +389,62 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.3489645}
   m_Size: {x: 0.51689434, y: 1.2810332}
   m_Direction: 0
+--- !u!50 &5610093938563920001
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261136040992015367}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.5
+  m_LinearDrag: 4
+  m_AngularDrag: 4
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &8139739968880079360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261136040992015367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db012c7b4c25039478587c51ffda3c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 7
+  EnemyDetection: {fileID: 8137267585617564128}
+  undeadToPlayer: {fileID: 0}
+  undeadChasePlayer: {fileID: 0}
+  anim: {fileID: 5084223092143937689}
+--- !u!114 &6528068382278961604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261136040992015367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96d54b7499d7f8408322e6749799909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyVelocity: 4
+  anim: {fileID: 5084223092143937689}
+  changeTimeMin: 2
+  changeTimeMax: 4
+  waitTime: 1
+  FacingLeft: 0
 --- !u!1 &6363923359956905158
 GameObject:
   m_ObjectHideFlags: 0
