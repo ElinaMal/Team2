@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4947060560960172514}
   m_Layer: 0
   m_Name: DetectionZone
-  m_TagString: Untagged
+  m_TagString: GoodGuysZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 597165518778208303}
   m_Layer: 0
   m_Name: WizardZombie
-  m_TagString: Untagged
+  m_TagString: GoodGuys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
