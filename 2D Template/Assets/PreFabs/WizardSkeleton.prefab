@@ -155,6 +155,8 @@ GameObject:
   - component: {fileID: 573266353586734074}
   - component: {fileID: 4121268215133036390}
   - component: {fileID: 2978311632915525707}
+  - component: {fileID: 8811827602425810417}
+  - component: {fileID: 6143779367324192864}
   m_Layer: 0
   m_Name: WizardSkeleton
   m_TagString: GoodGuys
@@ -338,3 +340,149 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8811827602425810417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765342280887728469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f82554b2a67d34e942b295d0a5ab0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3879945122344325303, guid: 1a339fbbaa392f644b8f19e3d26c242f, type: 3}
+  targetDetectorObject: {fileID: 121877278792795535}
+  target: {fileID: 0}
+  anim: {fileID: 2978311632915525707}
+  shootRate: 3
+  shootTimer: 1
+  projectileMaxHeight: 0.5
+  distanceToTargetToDestroyProjectile: 0
+  maxMoveSpeed: 8
+  destroyTime: 3
+  damage: 2
+  targetTag: BadGuys
+  trajectoryAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.000034913188
+      value: 0.00004103256
+      inSlope: 0.78805643
+      outSlope: 0.78805643
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25348738
+      value: 0.1998309
+      inSlope: -0.0040625334
+      outSlope: -0.0040625334
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7603002
+      value: -0.20368408
+      inSlope: 0.026930094
+      outSlope: 0.026930094
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9999651
+      value: 0.00004103256
+      inSlope: 0.8500417
+      outSlope: 0.8500417
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  axisCorrectionAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  speedAnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Pierce: 0
+  Slash: 0
+  Blunt: 0
+  AN: 0
+  Burn: 0
+  burnAmount: 0
+  burnDamage: 0
+--- !u!114 &6143779367324192864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3765342280887728469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68df4794cfa0ee7439933b934aa57414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  MAX_HEALTH: 2
+  defense: 0
+  attackArea: {fileID: 0}
+  pierceRes: 1
+  slashRes: 0
+  bluntRes: 0
+  burnRes: 0
+  burnTicks: 0
+  burnDelta: 0
+  burnDamage: 0
+  anim: {fileID: 2978311632915525707}
+  isDead: 0

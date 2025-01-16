@@ -20,12 +20,6 @@ public class NPCMeleeAttack : MonoBehaviour
     [SerializeField] private string targetTag;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        parentAnim = parentObject.GetComponent<Animator>();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -63,8 +57,9 @@ public class NPCMeleeAttack : MonoBehaviour
         {
             attacking = true;
             attackArea.SetActive(attacking);
-            anim.SetBool("isAttacking", true);
-            parentAnim.SetBool("isAttacking", true);
+            //anim.SetTrigger("isAttacking");
+            Debug.Log("attack");
+            parentAnim.SetTrigger("isAttacking");
             canAttack = false;
             attackTimer = 0;
         }
