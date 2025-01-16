@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1019705515}
         m_TargetAssemblyTypeName: Replay, Assembly-CSharp
-        m_MethodName: PlayGane
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
