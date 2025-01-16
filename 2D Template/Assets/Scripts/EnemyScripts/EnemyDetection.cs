@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
@@ -11,7 +10,6 @@ public class EnemyDetection : MonoBehaviour
     public UndeadChasePlayer chasePlayer;
     public WhereIsPlayer whereIsPlayer;
     public bool closeEnough;
-    private bool wait;
     [SerializeField] private string targetTag;
     private float distanceTarget;
 
