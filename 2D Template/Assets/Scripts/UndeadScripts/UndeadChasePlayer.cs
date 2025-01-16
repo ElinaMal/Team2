@@ -4,17 +4,9 @@ public class UndeadChasePlayer : MonoBehaviour
 {
     [SerializeField] private float velocity;
     [SerializeField] private Animator anim;
-
-    private Rigidbody2D rigidBody;
     public UndeadToPlayer undeadToPlayer;
-    public EnemyChasing enemyChasing;
     private Vector2 targetDirection;
     private bool facingLeft;
-
-    private void Awake()
-    {
-        rigidBody = GetComponent<Rigidbody2D>();
-    }
 
     // Update is called once per frame
     void Update()
