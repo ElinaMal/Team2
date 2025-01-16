@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3439081320908292350}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: GoodGuysZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionToPlayer: {x: 0, y: 0}
-  target: {fileID: 0}
+  target: {fileID: 3514045722576730929}
   distance: 0
 --- !u!58 &2816877573586640665
 CircleCollider2D:
@@ -112,7 +112,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -132,13 +132,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   directionToPlayer: {x: 0, y: 0}
-  target: {fileID: 0}
+  target: {fileID: 3514045722576730929}
   correctTarget: 0
-  undeadToPlayer: {fileID: 0}
-  chasePlayer: {fileID: 0}
-  whereIsPlayer: {fileID: 0}
+  undeadToPlayer: {fileID: 5116444419806025825}
+  chasePlayer: {fileID: 3351712570725777558}
+  whereIsPlayer: {fileID: 6461852173211319480}
   closeEnough: 0
-  targetTag: 
+  targetTag: BadGuys
 --- !u!1 &7501254526188940219
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 5116444419806025825}
   m_Layer: 0
   m_Name: PyroSkeleton
-  m_TagString: Untagged
+  m_TagString: GoodGuys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 7501254526188940219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.3182077, y: -1.3812251, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7658593233248611312}
@@ -217,8 +217,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -707545207
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -259,15 +259,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_Mass: 0.5
+  m_LinearDrag: 4
+  m_AngularDrag: 4
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6273745780367484637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,11 +325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db012c7b4c25039478587c51ffda3c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0
-  EnemyDetection: {fileID: 0}
-  undeadToPlayer: {fileID: 0}
-  undeadChasePlayer: {fileID: 0}
-  anim: {fileID: 0}
+  velocity: 10
+  EnemyDetection: {fileID: 3439081320908292350}
+  undeadToPlayer: {fileID: 5116444419806025825}
+  undeadChasePlayer: {fileID: 3351712570725777558}
+  anim: {fileID: 1552358636363732141}
 --- !u!114 &3351712570725777558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,10 +342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e762f976d4a49f14ba25c1a731fab002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0
-  anim: {fileID: 0}
-  undeadToPlayer: {fileID: 0}
-  enemyChasing: {fileID: 0}
+  velocity: 10
+  anim: {fileID: 1552358636363732141}
+  undeadToPlayer: {fileID: 5116444419806025825}
+  enemyChasing: {fileID: 3324931061417047004}
 --- !u!114 &5116444419806025825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   directionToPlayer: {x: 0, y: 0}
-  enemyChasing: {fileID: 0}
-  target: {fileID: 0}
-  player: {fileID: 0}
+  enemyChasing: {fileID: 3324931061417047004}
+  target: {fileID: 3514045722576730929}
+  player: {fileID: 6461852173211319480}
   correctTarget: 0

@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1699347360639657331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5899271, y: -3.1804814, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 396341684787006109}
@@ -103,11 +103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db012c7b4c25039478587c51ffda3c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0
-  EnemyDetection: {fileID: 0}
+  velocity: 10
+  EnemyDetection: {fileID: 173510822341259692}
   undeadToPlayer: {fileID: 0}
   undeadChasePlayer: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 6930811191280445527}
 --- !u!114 &1824443403092519991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,11 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96d54b7499d7f8408322e6749799909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyVelocity: 0
-  anim: {fileID: 0}
-  changeTimeMin: 0
-  changeTimeMax: 0
-  waitTime: 0
+  enemyVelocity: 8
+  anim: {fileID: 6930811191280445527}
+  changeTimeMin: 2
+  changeTimeMax: 4
+  waitTime: 1
   FacingLeft: 0
 --- !u!50 &4741789615877117936
 Rigidbody2D:
@@ -138,15 +138,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_Mass: 0.5
+  m_LinearDrag: 4
+  m_AngularDrag: 4
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &6914032995484974554
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 173510822341259692}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: BadGuysZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +304,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -324,10 +324,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detected: 0
   directionToPlayer: {x: 0, y: 0}
-  target: {fileID: 0}
+  target: {fileID: 6749566078932819324}
   correctTarget: 0
   undeadToPlayer: {fileID: 0}
   chasePlayer: {fileID: 0}
   whereIsPlayer: {fileID: 0}
   closeEnough: 0
-  targetTag: 
+  targetTag: GoodGuys
