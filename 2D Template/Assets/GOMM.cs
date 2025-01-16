@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Replay: MonoBehaviour
+public class GOMM : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void PlayGame()
+    public void MainMenu()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 }
-
