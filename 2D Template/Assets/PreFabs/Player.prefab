@@ -585,7 +585,7 @@ MonoBehaviour:
   Pierce: 0
   Slash: 0
   Blunt: 0
-  AN: 0
+  AN: 1
   Burn: 0
   burnAmount: 0
   burnDamage: 0
