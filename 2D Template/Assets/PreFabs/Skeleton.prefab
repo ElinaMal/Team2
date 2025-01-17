@@ -122,7 +122,7 @@ MonoBehaviour:
   chasePlayer: {fileID: 5098282128053474266}
   whereIsPlayer: {fileID: 1203216087841286646}
   closeEnough: 0
-  targetTag: BaGuys
+  targetTag: BadGuys
 --- !u!58 &7055153653977205209
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -263,7 +263,6 @@ MonoBehaviour:
   velocity: 9
   anim: {fileID: 8920967745035721956}
   undeadToPlayer: {fileID: 3083786467630716202}
-  enemyChasing: {fileID: 975390131534898729}
 --- !u!114 &3083786467630716202
 MonoBehaviour:
   m_ObjectHideFlags: 0
