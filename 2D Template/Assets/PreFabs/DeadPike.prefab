@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59956fdbc4c8c1409bd0d6e613352a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undead1: {fileID: 2873650487832160860, guid: 31dae33af225e1f49b37ce98386608a3, type: 3}
+  undead1: {fileID: 2520239519232593964, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
   undead2: {fileID: 2520239519232593964, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
   undeadLimit: 60
   skeletonChance: 20
