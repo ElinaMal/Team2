@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArcherIdle
+  m_Name: ArcherDead
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1070539519, guid: 83072ab390912c74a980fd30d2cd764d, type: 3}
+      value: {fileID: 1999661827, guid: f9a11fac74641054b901bf1ca0fc5aa0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,7 +41,7 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
     pptrCurveMapping:
-    - {fileID: 1070539519, guid: 83072ab390912c74a980fd30d2cd764d, type: 3}
+    - {fileID: 1999661827, guid: f9a11fac74641054b901bf1ca0fc5aa0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

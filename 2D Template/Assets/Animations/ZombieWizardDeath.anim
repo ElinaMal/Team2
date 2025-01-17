@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArcherIdle
+  m_Name: ZombieWizardDeath
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,17 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1070539519, guid: 83072ab390912c74a980fd30d2cd764d, type: 3}
+      value: {fileID: 1480201149, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - time: 0.13333334
+      value: {fileID: -1222089912, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - time: 0.25
+      value: {fileID: 2127074115, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - time: 0.41666666
+      value: {fileID: 143675995, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - time: 0.53333336
+      value: {fileID: 1070686040, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - time: 0.6666667
+      value: {fileID: 1070686040, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,13 +51,18 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
     pptrCurveMapping:
-    - {fileID: 1070539519, guid: 83072ab390912c74a980fd30d2cd764d, type: 3}
+    - {fileID: 1480201149, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - {fileID: -1222089912, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - {fileID: 2127074115, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - {fileID: 143675995, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - {fileID: 1070686040, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
+    - {fileID: 1070686040, guid: fcbe4f1e8b88b534ebdc6944196b3899, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.68333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
