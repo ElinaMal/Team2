@@ -20,9 +20,9 @@ public class EnemySpawn : MonoBehaviour
     {
         timeUntilSpawn -= Time.deltaTime;
         
-        if (enemyNumber.levelUpScore >= 30 && enemyNumberLimit < 400)
+        if (enemyNumber.levelUpScore >= 30 && enemyNumberLimit < 500)
         {
-            enemyNumberLimit += 40;
+            enemyNumberLimit += 50;
         }
 
         if (timeUntilSpawn <= 0 && enemyNumber.enemyCounter < enemyNumberLimit)

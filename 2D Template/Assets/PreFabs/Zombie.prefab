@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db012c7b4c25039478587c51ffda3c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 8
   EnemyDetection: {fileID: 2427674873133561702}
   undeadToPlayer: {fileID: 8724719183142094790}
   undeadChasePlayer: {fileID: 9035361353265565374}
@@ -351,10 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e762f976d4a49f14ba25c1a731fab002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 8
   anim: {fileID: 6428650313319347633}
   undeadToPlayer: {fileID: 8724719183142094790}
-  enemyChasing: {fileID: 4981938966152942870}
 --- !u!114 &3844384562399825714
 MonoBehaviour:
   m_ObjectHideFlags: 0

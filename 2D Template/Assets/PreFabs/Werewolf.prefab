@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db012c7b4c25039478587c51ffda3c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 8
   EnemyDetection: {fileID: 8497569771612221710}
   undeadToPlayer: {fileID: 0}
   undeadChasePlayer: {fileID: 0}

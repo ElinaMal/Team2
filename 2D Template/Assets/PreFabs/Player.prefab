@@ -214,7 +214,7 @@ MonoBehaviour:
   right: 100
   up: 119
   down: 115
-  maxSpeed: 10
+  maxSpeed: 8
   anim: {fileID: 3306738516604657564}
 --- !u!70 &3306738516604657563
 CapsuleCollider2D:
