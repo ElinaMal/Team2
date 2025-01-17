@@ -39,13 +39,13 @@ public class EnemyMovement : MonoBehaviour
             FindMovement();
         }
 
-        if (movement.x != 0 || movement.y != 0)
+        if (wait == true)
         {
-            anim.SetBool("isWalking", true);
+            anim.SetBool("isWalking", false);
         }
         else
         {
-            anim.SetBool("isWalking", false);
+            anim.SetBool("isWalking", true);
         }
 
         if (wait == false)
@@ -74,7 +74,8 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator StandingStill()
     {
         wait = true;
-        anim.SetBool("isWalking", false);
+        movement.x = 0;
+        movement.y = 0;
         _rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(waitTime);
         wait = false;

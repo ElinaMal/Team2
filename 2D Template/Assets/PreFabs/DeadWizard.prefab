@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5959522753039079469}
   - component: {fileID: 5452805506781103833}
   - component: {fileID: 7141078862727573933}
-  - component: {fileID: 4898120098026700071}
+  - component: {fileID: 7398491741700971958}
   m_Layer: 0
   m_Name: DeadWizard
   m_TagString: Corpse
@@ -102,7 +102,7 @@ MonoBehaviour:
   undead2: {fileID: 8309029668435182494, guid: 11f66af464b7ec84eac08b5da21aafe8, type: 3}
   undeadLimit: 60
   skeletonChance: 80
---- !u!70 &4898120098026700071
+--- !u!70 &7398491741700971958
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,6 +115,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08811312, y: -0.3303398}
-  m_Size: {x: 1.3063427, y: 0.38688862}
+  m_Offset: {x: -0.060510445, y: -0.35841307}
+  m_Size: {x: 1.3483461, y: 0.4173996}
   m_Direction: 1

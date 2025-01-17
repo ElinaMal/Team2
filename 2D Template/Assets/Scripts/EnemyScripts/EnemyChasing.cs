@@ -55,11 +55,13 @@ public class EnemyChasing : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, EnemyDetection.target.position, Time.deltaTime * velocity);
                 targetDirection = EnemyDetection.directionToPlayer;
             }
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
         }
         else
         {
-            anim.SetBool("isWalking", false);
-
             targetDirection = Vector2.zero;
         }
     }

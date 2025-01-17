@@ -9,7 +9,6 @@ public class EnemyDetection : MonoBehaviour
     public UndeadToPlayer undeadToPlayer;
     public UndeadChasePlayer chasePlayer;
     public WhereIsPlayer whereIsPlayer;
-    public EnemyMovement enemyMovement;
     public bool closeEnough;
     [SerializeField] private string targetTag;
     private float distanceTarget;
@@ -31,13 +30,11 @@ public class EnemyDetection : MonoBehaviour
                 if (gameObject.CompareTag("GoodGuysZone") && closeEnough)
                 {
                     undeadToPlayer.enabled = false;
-                    enemyMovement.enabled = false;
                 }
 
                 if (gameObject.CompareTag("GoodGuys"))
                 {
                     chasePlayer.enabled = false;
-                    enemyMovement.enabled = true;
                 }
 
                 target = collider.gameObject.transform;
@@ -79,12 +76,10 @@ public class EnemyDetection : MonoBehaviour
                 if (undeadToPlayer != null)
                 {
                     undeadToPlayer.enabled = true;
-                    enemyMovement.enabled = false;
                 }
                 if (chasePlayer != null)
                 {
                     chasePlayer.enabled = true;
-                    enemyMovement.enabled = false;
                 }
             }
             //
@@ -99,12 +94,10 @@ public class EnemyDetection : MonoBehaviour
                 if (undeadToPlayer != null)
                 {
                     undeadToPlayer.enabled = true;
-                    enemyMovement.enabled = false;
                 }
                 if (chasePlayer != null)
                 {
                     chasePlayer.enabled = true;
-                    enemyMovement.enabled = false;
                 }
             }
         }

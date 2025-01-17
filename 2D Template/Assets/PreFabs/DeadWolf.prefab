@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7433661483535287106}
   - component: {fileID: 7548768471383611118}
-  - component: {fileID: 4622230981075113256}
   - component: {fileID: 5805738061019612157}
+  - component: {fileID: 7376371320716463714}
   m_Layer: 0
   m_Name: DeadWolf
   m_TagString: Corpse
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &4622230981075113256
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2771003918418580663}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.039856315, y: -0.5247563}
-  m_Size: {x: 1.1674796, y: 0.30395713}
-  m_Direction: 1
 --- !u!114 &5805738061019612157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +102,19 @@ MonoBehaviour:
   undead2: {fileID: 1017187371302821836, guid: 1373aea2c44dca147976755dc33ff2ae, type: 3}
   undeadLimit: 60
   skeletonChance: 50
+--- !u!70 &7376371320716463714
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2771003918418580663}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.066425614, y: -0.5025042}
+  m_Size: {x: 1.127843, y: 0.33654037}
+  m_Direction: 1
