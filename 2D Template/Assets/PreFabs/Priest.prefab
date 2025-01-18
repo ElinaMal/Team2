@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6310121435996640104}
   - component: {fileID: 3736332685495959682}
   - component: {fileID: 346921431440084572}
-  - component: {fileID: 3419327845009339725}
   - component: {fileID: 7827299594931818999}
   - component: {fileID: 640057704606974225}
+  - component: {fileID: 2082202677410350010}
   m_Layer: 0
   m_Name: Priest
   m_TagString: BadGuys
@@ -136,7 +136,7 @@ MonoBehaviour:
   burnTicks: 0
   burnDelta: 0
   burnDamage: 0
-  anim: {fileID: 3419327845009339725}
+  anim: {fileID: 2082202677410350010}
   isDead: 0
 --- !u!114 &3736332685495959682
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   EnemyDetection: {fileID: 2831883583558987273}
   undeadToPlayer: {fileID: 0}
   undeadChasePlayer: {fileID: 0}
-  anim: {fileID: 3419327845009339725}
+  anim: {fileID: 2082202677410350010}
 --- !u!114 &346921431440084572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,31 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyVelocity: 4
-  anim: {fileID: 3419327845009339725}
+  anim: {fileID: 2082202677410350010}
   changeTimeMin: 5
   changeTimeMax: 10
   waitTime: 2.6
   FacingLeft: 0
---- !u!95 &3419327845009339725
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5807890615252592704}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 06cac03f85cf53d4d8193ea1e2dc7256, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7827299594931818999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,8 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3879945122344325303, guid: d611d393ec3912249a462d64624ca797, type: 3}
   targetDetectorObject: {fileID: 7619713901265038090}
-  target: {fileID: 0}
-  anim: {fileID: 3419327845009339725}
+  target: {fileID: 5807890615252592710}
+  anim: {fileID: 2082202677410350010}
   shootRate: 5
   shootTimer: 1
   projectileMaxHeight: 0.5
@@ -321,6 +301,26 @@ CapsuleCollider2D:
   m_Offset: {x: -0.04041314, y: 0.015155017}
   m_Size: {x: 0.38346195, y: 1.0401806}
   m_Direction: 0
+--- !u!95 &2082202677410350010
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807890615252592704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06cac03f85cf53d4d8193ea1e2dc7256, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7619713901265038090
 GameObject:
   m_ObjectHideFlags: 0

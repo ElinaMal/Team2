@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDelay: 0.5
   anim: {fileID: 0}
-  parentAnim: {fileID: 6428650313319347633}
+  parentAnim: {fileID: 0}
   attackArea: {fileID: 7738017383419450410}
   targetDetectorObject: {fileID: 1013586769663160154}
   parentObject: {fileID: 2520239519232593964}
@@ -222,9 +222,9 @@ GameObject:
   - component: {fileID: 4981938966152942870}
   - component: {fileID: 9035361353265565374}
   - component: {fileID: 3844384562399825714}
-  - component: {fileID: 6428650313319347633}
   - component: {fileID: 8724719183142094790}
   - component: {fileID: 742585235604345275}
+  - component: {fileID: 4358187499149293712}
   m_Layer: 6
   m_Name: Zombie
   m_TagString: GoodGuys
@@ -338,7 +338,7 @@ MonoBehaviour:
   EnemyDetection: {fileID: 2427674873133561702}
   undeadToPlayer: {fileID: 8724719183142094790}
   undeadChasePlayer: {fileID: 9035361353265565374}
-  anim: {fileID: 6428650313319347633}
+  anim: {fileID: 4358187499149293712}
 --- !u!114 &9035361353265565374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 8
-  anim: {fileID: 6428650313319347633}
+  anim: {fileID: 4358187499149293712}
   undeadToPlayer: {fileID: 8724719183142094790}
 --- !u!114 &3844384562399825714
 MonoBehaviour:
@@ -377,28 +377,8 @@ MonoBehaviour:
   burnTicks: 0
   burnDelta: 0
   burnDamage: 0
-  anim: {fileID: 6428650313319347633}
+  anim: {fileID: 4358187499149293712}
   isDead: 0
---- !u!95 &6428650313319347633
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2520239519232593964}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: be7a07d1c4f398747bf91acdcf82aa07, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8724719183142094790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +413,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06731783, y: -0.043756604}
   m_Size: {x: 0.3978348, y: 0.956573}
   m_Direction: 0
+--- !u!95 &4358187499149293712
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520239519232593964}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be7a07d1c4f398747bf91acdcf82aa07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7738017383419450410
 GameObject:
   m_ObjectHideFlags: 0

@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: -707545207
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1384874381, guid: f9a11fac74641054b901bf1ca0fc5aa0, type: 3}
+  m_Sprite: {fileID: -1900878266, guid: 0cadd41c674447846899f700d7ac8de8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -99,8 +99,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.037307415, y: -0.74217474}
-  m_Size: {x: 0.9122704, y: 0.3428717}
+  m_Offset: {x: 0.22972317, y: -0.74217474}
+  m_Size: {x: 1.0850533, y: 0.3428717}
   m_Direction: 1
 --- !u!114 &7553150494864561924
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59956fdbc4c8c1409bd0d6e613352a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undead1: {fileID: 658610642591826407, guid: d617f7c1a0d2fe54581cd9472a9d2ea0, type: 3}
-  undead2: {fileID: 1570329949385323778, guid: baa41fe7cdd0d014fa1531c0163c8c7b, type: 3}
+  undead1: {fileID: 2520239519232593964, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
+  undead2: {fileID: 2520239519232593964, guid: 8e14e6945b183554bb73933c4dfe347b, type: 3}
   undeadLimit: 60
   skeletonChance: 30
