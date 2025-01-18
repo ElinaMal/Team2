@@ -58,7 +58,7 @@ public class EnemyDetection : MonoBehaviour
     {
         if (target == null)
         {
-            target = target = GameObject.Find("Player").transform;
+            target = GameObject.Find("Player").transform;
         }
 
         Vector2 enemyToPlayerVector = target.position - transform.position;

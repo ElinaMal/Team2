@@ -25,6 +25,11 @@ public class NPCMeleeAttack : MonoBehaviour
     {
         findTarget();
 
+        if (target == null)
+        {
+            target = GameObject.Find("Player").transform;
+        }
+
         Vector3 rotation = target.position - transform.position;
 
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;

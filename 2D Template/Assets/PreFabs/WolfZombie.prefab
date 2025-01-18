@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDelay: 0.5
-  anim: {fileID: 0}
+  anim: {fileID: 4440081637583826894}
   parentAnim: {fileID: 4440081637583826894}
   attackArea: {fileID: 1383397661671549142}
   targetDetectorObject: {fileID: 4854845844428029302}
