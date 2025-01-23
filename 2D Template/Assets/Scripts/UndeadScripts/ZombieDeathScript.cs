@@ -6,12 +6,6 @@ public class ZombieDeathScript : StateMachineBehaviour
     [SerializeField] private GameObject undeadPrefab;
     [SerializeField] private GameObject numberTracker;
 
-    void Start()
-    {
-        numberTracker = GameObject.Find("EnemyNumberTracker");
-        EnemyNumberTracker enemyNumberTracker = numberTracker.GetComponent<EnemyNumberTracker>();
-        enemyNumberTracker.undeadCounter--;
-    }
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -28,6 +22,9 @@ public class ZombieDeathScript : StateMachineBehaviour
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        numberTracker = GameObject.Find("EnemyNumberTracker");
+        EnemyNumberTracker enemyNumberTracker = numberTracker.GetComponent<EnemyNumberTracker>();
+        enemyNumberTracker.undeadCounter--;
         Instantiate(undeadPrefab, animator.gameObject.transform.position, animator.gameObject.transform.rotation);
         Destroy(animator.gameObject);
     }
