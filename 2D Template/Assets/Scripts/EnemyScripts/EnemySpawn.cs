@@ -29,13 +29,9 @@ public class EnemySpawn : MonoBehaviour
         {
             Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             enemyNumber.enemyCounter++;
-            setTimeUntilSpawn();
+            timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
+
         }
         
-    }
-
-    void setTimeUntilSpawn()
-    {
-        timeUntilSpawn = Random.Range(minSpawnTime, maxSpawnTime);
     }
 }
